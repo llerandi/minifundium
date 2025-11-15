@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dxrf6wi26ljgs"]
+
+[ext_resource type="Texture2D" uid="uid://bmcndjssgvhnd" path="res://assets/game/characters/premium_character_spritesheet.png" id="1_7uws0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t61fv"]
+atlas = ExtResource("1_7uws0")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_686vu"]
+atlas = ExtResource("1_7uws0")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hss88"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t61fv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_686vu")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7uws0"]
+radius = 8.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_hss88")
+animation = &"front"
+autoplay = "front"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_7uws0")
