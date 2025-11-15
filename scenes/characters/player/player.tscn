@@ -48,28 +48,28 @@ region = Rect2(48, 0, 48, 48)
 [sub_resource type="SpriteFrames" id="SpriteFrames_hss88"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_hss88")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_qd3e3")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_6avc5")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_mk55u")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_xuses")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_42irl")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_3xnwo")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": SubResource("AtlasTexture_djydg")
 }],
 "loop": true,
@@ -98,6 +98,8 @@ position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_hss88")
 animation = &"down"
 autoplay = "front"
+frame = 4
+frame_progress = 0.19570424
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -8)
