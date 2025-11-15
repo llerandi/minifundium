@@ -37,8 +37,6 @@ func _on_process(_delta: float) -> void:
 		sprite.play("front")
 	elif direction == Vector2.RIGHT:
 		sprite.play("front")
-	else:
-		sprite.play("front")
 
 	player.velocity = direction * speed
 	player.move_and_slide()
