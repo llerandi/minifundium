@@ -30,13 +30,13 @@ func _on_process(_delta: float) -> void:
 	
 	# I'm only having 1 character animation right now
 	if direction == Vector2.UP:
-		sprite.play("front")
+		sprite.play("down")
 	elif direction == Vector2.DOWN:
-		sprite.play("front")
+		sprite.play("down")
 	elif direction == Vector2.LEFT:
-		sprite.play("front")
+		sprite.play("down")
 	elif direction == Vector2.RIGHT:
-		sprite.play("front")
+		sprite.play("down")
 
 	player.velocity = direction * speed
 	player.move_and_slide()
