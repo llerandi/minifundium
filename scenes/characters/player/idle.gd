@@ -32,16 +32,7 @@ func _on_process(_delta: float) -> void:
 # Called by the state machine's _physics_process function at a fixed interval
 ## Place for all physics-related code (e.g., moving a character)
 func _on_physics_process(_delta: float) -> void:
-	if Input.is_action_pressed("up"):
-		direction = Vector2.UP
-	elif Input.is_action_pressed("down"):
-		direction = Vector2.DOWN
-	elif Input.is_action_pressed("left"):
-		direction = Vector2.LEFT
-	elif Input.is_action_pressed("right"):
-		direction = Vector2.RIGHT
-	else:
-		direction = Vector2.ZERO # Nothing is pressed, then idle
+	direction = GameInputEvents.movement_input() # A dedicated script for handling the pressed input keys
 
 	# I'm only having 1 character animation right now
 	if direction == Vector2.UP:
