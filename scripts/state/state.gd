@@ -9,6 +9,10 @@
 # Class definition and inheritance
 class_name State extends Node
 
+# Signals allow all connected Callables to listen and react to events, without directly referencing one another
+## https://docs.godotengine.org/en/4.4/classes/class_signal.html
+signal transition
+
 # Called by the state machine once when the state becomes active
 ## Setup logic (e.g., starting an animation or enabling a collision shape)
 func _on_enter() -> void:
