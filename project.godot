@@ -20,8 +20,7 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
-window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
 [input]
@@ -50,3 +49,7 @@ right={
 [layer_names]
 
 2d_navigation/layer_1="Chicken"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
