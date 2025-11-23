@@ -16,6 +16,7 @@ extends State
 @export var idle_interval: float = 2.0
 ## Timer: https://docs.godotengine.org/en/stable/classes/class_timer.html
 ## @onready annotation: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#onready-annotation
+## The timer is here to be a self-contained, reusable component that doesn't depend on a specific scene setup
 @onready var idle_timer: Timer = Timer.new()
 var idle_timeout: bool = false # Will act as a traffic light for the timeout
 
