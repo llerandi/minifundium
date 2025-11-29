@@ -9,7 +9,7 @@
 # Inheritance
 extends State
 
-@export var player: CharacterBody2D
+@export var player: Player
 @export var sprite: AnimatedSprite2D
 @export var speed: int = 30
 
@@ -21,7 +21,7 @@ func _on_enter() -> void:
 # Called by the state machine just before switching to a new state
 ## For cleanup (e.g., stopping the current animation)
 func _on_exit() -> void:
-	pass
+	sprite.stop()
 
 # Called by the state machine's _process function on every frame
 ## Logic that needs to run continuously but isn't physics-dependent (e.g., checking for input)
@@ -33,7 +33,6 @@ func _on_process(_delta: float) -> void:
 func _on_physics_process(_delta: float) -> void:
 	var direction: Vector2 = GameInputEvents.movement_input()
 	
-	# I'm only having 1 character animation right now
 	if direction == Vector2.UP:
 		sprite.play("down")
 	elif direction == Vector2.DOWN:
@@ -42,6 +41,9 @@ func _on_physics_process(_delta: float) -> void:
 		sprite.play("down")
 	elif direction == Vector2.RIGHT:
 		sprite.play("down")
+	
+	if direction != Vector2.ZERO:
+		player.direction = direction
 
 	player.velocity = direction * speed
 	player.move_and_slide()
