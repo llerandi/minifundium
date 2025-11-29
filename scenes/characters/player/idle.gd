@@ -47,5 +47,5 @@ func _on_next_transitions() -> void:
 	if GameInputEvents.is_movement_input():
 		transition.emit("Movement")
 	
-	if player.current_tool == DataTypes.Tool.AXE:
+	if player.current_tool == DataTypes.Tool.AXE && GameInputEvents.use_tool():
 		transition.emit("Woodcutting")
