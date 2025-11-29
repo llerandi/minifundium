@@ -26,6 +26,11 @@ func _on_exit() -> void:
 # Called by the state machine's _process function on every frame
 ## Logic that needs to run continuously but isn't physics-dependent (e.g., checking for input)
 func _on_process(_delta: float) -> void:
+	pass
+
+# Called by the state machine's _physics_process function at a fixed interval
+## Place for all physics-related code (e.g., moving a character)
+func _on_physics_process(_delta: float) -> void:
 	var direction: Vector2 = GameInputEvents.movement_input()
 	
 	# I'm only having 1 character animation right now
@@ -40,11 +45,6 @@ func _on_process(_delta: float) -> void:
 
 	player.velocity = direction * speed
 	player.move_and_slide()
-
-# Called by the state machine's _physics_process function at a fixed interval
-## Place for all physics-related code (e.g., moving a character)
-func _on_physics_process(_delta: float) -> void:
-	pass
 
 # Called by the state machine to check the conditions for transitioning to another state
 func _on_next_transitions() -> void:
