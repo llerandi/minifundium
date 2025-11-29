@@ -22,3 +22,6 @@ static func movement_input() -> Vector2:
 		direction = Vector2.ZERO # Nothing is pressed, then idle
 	
 	return direction
+
+static func use_tool() -> bool:
+	return Input.is_action_just_pressed("left_click")
