@@ -852,5 +852,7 @@ script = ExtResource("4_hss88")
 player = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 
-[node name="Woodcutting" type="Node" parent="StateMachine"]
+[node name="Woodcutting" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite")]
 script = ExtResource("6_6avc5")
+player = NodePath("../..")
+sprite = NodePath("../../AnimatedSprite2D")
