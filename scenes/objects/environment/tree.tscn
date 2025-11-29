@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cat0fdxwgmbj"]
+
+[node name="Tree" type="Sprite2D"]
