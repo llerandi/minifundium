@@ -24,15 +24,15 @@ func _on_enter() -> void:
 	if player.direction == Vector2.UP:
 		sprite.play("chopping_up")
 		# The position is achieved in the visual editor within Transform > Position(x, y)
-		hitbox_collision.position = Vector2(1, -20)
+		hitbox_collision.position = Vector2(2, -20)
 	elif player.direction == Vector2.DOWN:
 		sprite.play("chopping_down")
 		# The position is achieved in the visual editor within Transform > Position(x, y)
-		hitbox_collision.position = Vector2(-1, 20)
+		hitbox_collision.position = Vector2(-2, 2)
 	elif player.direction == Vector2.LEFT:
 		sprite.play("chopping_left")
 		# The position is achieved in the visual editor within Transform > Position(x, y)
-		hitbox_collision.position = Vector2(-8, 2)
+		hitbox_collision.position = Vector2(-8, -2)
 	elif player.direction == Vector2.RIGHT:
 		sprite.play("chopping_right")
 		# The position is achieved in the visual editor within Transform > Position(x, y)

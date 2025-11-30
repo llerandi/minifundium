@@ -835,7 +835,7 @@ script = ExtResource("1_qd3e3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_hss88")
-animation = &"chopping_up"
+animation = &"chopping_right"
 autoplay = "front"
 frame = 7
 frame_progress = 1.0
@@ -867,6 +867,6 @@ hitbox_collision = NodePath("../../Hitbox/HitboxCollision")
 [node name="Hitbox" parent="." instance=ExtResource("7_mk55u")]
 
 [node name="HitboxCollision" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(1, -20)
+position = Vector2(8, -2)
 shape = SubResource("CircleShape2D_xuses")
 debug_color = Color(0, 0.9843137, 0, 0.41960785)
