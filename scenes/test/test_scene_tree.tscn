@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=4 uid="uid://ctmtkswsv7qti"]
+[gd_scene load_steps=3 format=4 uid="uid://ctmtkswsv7qti"]
 
 [ext_resource type="TileSet" uid="uid://dvxbj3gbyh4iq" path="res://tilesets/game_tile_set.tres" id="1_hrsim"]
+[ext_resource type="PackedScene" uid="uid://dxrf6wi26ljgs" path="res://scenes/characters/player/player.tscn" id="2_ackek"]
 
 [node name="TestSceneTilemap" type="Node2D"]
 
@@ -17,3 +18,12 @@ tile_set = ExtResource("1_hrsim")
 [node name="Ground" type="TileMapLayer" parent="GameTileMap"]
 tile_map_data = PackedByteArray("AAAHAAIAAgACAAIAAAAHAAEAAgACAAAAAAAGAAIAAgAAAAIAAAAGAAEAAgAAAAAAAAAFAAIAAgADAAMAAAAIAAMAAgADAAMAAAAJAAIAAgADAAMAAAAOAAcAAgAHAAMAAAANAAcAAgAAAAMAAAAOAAYAAgADAAAAAAACAAMAAgAHAAMAAAABAAMAAgAEAAAAAAABAAQAAgADAAIAAAACAAIAAgADAAAAAAAQAAoAAgAAAAYAAAARAAoAAgAAAAYAAAAQAAkAAgAAAAYAAAARAAkAAgAAAAYAAAARAAcAAgAAAAYAAAARAAYAAgAAAAYAAAAQAAYAAgAAAAYAAAAQAAgAAgAAAAYAAAARAAgAAgAAAAYAAAAQAAcAAgAAAAYAAAA=")
 tile_set = ExtResource("1_hrsim")
+
+[node name="Trees" type="TileMapLayer" parent="GameTileMap"]
+tile_map_data = PackedByteArray("AAAFAAsAAwAAAAAAAQAHAAkAAwAAAAAAAQAKAAkAAwAAAAAAAQA=")
+tile_set = ExtResource("1_hrsim")
+
+[node name="Player" parent="." instance=ExtResource("2_ackek")]
+position = Vector2(57, 189)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
