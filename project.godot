@@ -53,6 +53,7 @@ left_click={
 
 [layer_names]
 
+2d_physics/layer_1="Ground"
 2d_navigation/layer_1="Chicken"
 
 [rendering]
