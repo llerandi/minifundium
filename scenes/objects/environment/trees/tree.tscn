@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cat0fdxwgmbj"]
+[gd_scene load_steps=8 format=3 uid="uid://cat0fdxwgmbj"]
 
 [ext_resource type="Texture2D" uid="uid://dljntjowfl2t8" path="res://assets/game/environment/trees/trees_stumps_bushes_spritesheet.png" id="1_vhjfr"]
 [ext_resource type="PackedScene" uid="uid://jqwfjlb1373t" path="res://scenes/components/hurtbox.tscn" id="2_fg6mn"]
+[ext_resource type="Script" uid="uid://hkrenk1xcxid" path="res://scenes/objects/environment/trees/tree.gd" id="2_m0yij"]
+[ext_resource type="PackedScene" uid="uid://spsyhypjx1a1" path="res://scenes/components/damage.tscn" id="3_ygusn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_spbqt"]
 atlas = ExtResource("1_vhjfr")
@@ -11,11 +13,12 @@ region = Rect2(16, 0, 32, 32)
 radius = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygusn"]
-size = Vector2(8, 29)
+size = Vector2(20, 29)
 
 [node name="Tree" type="Sprite2D"]
 position = Vector2(0, -13)
 texture = SubResource("AtlasTexture_spbqt")
+script = ExtResource("2_m0yij")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -29,3 +32,6 @@ shape = SubResource("CircleShape2D_8t3lv")
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_ygusn")
 debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="Damage" parent="." instance=ExtResource("3_ygusn")]
+maximum_health = 5
