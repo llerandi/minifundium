@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cat0fdxwgmbj"]
+
+[ext_resource type="Texture2D" uid="uid://dljntjowfl2t8" path="res://assets/game/environment/trees/trees_stumps_bushes_spritesheet.png" id="1_vhjfr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spbqt"]
+atlas = ExtResource("1_vhjfr")
+region = Rect2(16, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8t3lv"]
+radius = 4.0
+
+[node name="Tree" type="Sprite2D"]
+position = Vector2(0, -13)
+texture = SubResource("AtlasTexture_spbqt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_8t3lv")
