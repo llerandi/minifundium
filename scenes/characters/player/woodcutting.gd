@@ -11,23 +11,40 @@ extends State
 
 @export var player: Player
 @export var sprite: AnimatedSprite2D
+@export var hitbox_collision: CollisionShape2D
+
+func _ready() -> void:
+	hitbox_collision.disabled = true
+	# To reset the collider position to the middle, its configuration is done using code in the _on_enter() function
+	hitbox_collision.position = Vector2(0, 0)
 
 # Called by the state machine once when the state becomes active
 ## Setup logic (e.g., starting an animation or enabling a collision shape)
 func _on_enter() -> void:
 	if player.direction == Vector2.UP:
 		sprite.play("chopping_up")
+		# The position is achieved in the visual editor within Transform > Position(x, y)
+		hitbox_collision.position = Vector2(1, -20)
 	elif player.direction == Vector2.DOWN:
 		sprite.play("chopping_down")
+		# The position is achieved in the visual editor within Transform > Position(x, y)
+		hitbox_collision.position = Vector2(-1, 20)
 	elif player.direction == Vector2.LEFT:
 		sprite.play("chopping_left")
+		# The position is achieved in the visual editor within Transform > Position(x, y)
+		hitbox_collision.position = Vector2(-8, 2)
 	elif player.direction == Vector2.RIGHT:
 		sprite.play("chopping_right")
-		
+		# The position is achieved in the visual editor within Transform > Position(x, y)
+		hitbox_collision.position = Vector2(8, -2)
+	
+	hitbox_collision.disabled = false # To activate it
+
 # Called by the state machine just before switching to a new state
 ## For cleanup (e.g., stopping the current animation)
 func _on_exit() -> void:
 	sprite.stop()
+	hitbox_collision.disabled = true
 
 # Called by the state machine's _process function on every frame
 ## Logic that needs to run continuously but isn't physics-dependent (e.g., checking for input)
