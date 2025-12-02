@@ -13,6 +13,7 @@ region = Rect2(116, 97, 23, 14)
 texture = SubResource("AtlasTexture_q5pri")
 
 [node name="Pickup" parent="." instance=ExtResource("2_q5pri")]
+item_pickup = "log"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
 position = Vector2(0, 1)
