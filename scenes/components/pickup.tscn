@@ -6,6 +6,5 @@
 collision_layer = 16
 collision_mask = 2
 script = ExtResource("1_f31u0")
-item_pickup = null
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
