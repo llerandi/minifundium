@@ -25,5 +25,6 @@ tile_set = ExtResource("1_hrsim")
 
 [node name="Player" parent="." instance=ExtResource("2_ackek")]
 position = Vector2(57, 189)
+current_tool = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

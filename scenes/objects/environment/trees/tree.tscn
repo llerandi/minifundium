@@ -34,4 +34,4 @@ shape = SubResource("RectangleShape2D_ygusn")
 debug_color = Color(1, 0, 0, 0.41960785)
 
 [node name="Damage" parent="." instance=ExtResource("3_ygusn")]
-maximum_health = 5
+maximum_health = 3
