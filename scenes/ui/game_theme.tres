@@ -1,0 +1,67 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://brxhpsbsklqkb"]
+
+[ext_resource type="Texture2D" uid="uid://dfgndbn0oqb41" path="res://assets/ui/ui_assets_spritesheet.png" id="1_v351s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x5vq"]
+atlas = ExtResource("1_v351s")
+region = Rect2(393, 105, 30, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6q0ak"]
+texture = SubResource("AtlasTexture_5x5vq")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+region_rect = Rect2(0, 0, 30, 30)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v351s"]
+load_path = "res://.godot/imported/ui_assets_spritesheet.png-e65e7f73d7976a86dd91c5810ac1623c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q0ak"]
+atlas = SubResource("CompressedTexture2D_v351s")
+region = Rect2(11, 107, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vrpuy"]
+texture = SubResource("AtlasTexture_6q0ak")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6naka"]
+atlas = ExtResource("1_v351s")
+region = Rect2(11, 155, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rhore"]
+texture = SubResource("AtlasTexture_6naka")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5x5vq"]
+load_path = "res://.godot/imported/ui_assets_spritesheet.png-e65e7f73d7976a86dd91c5810ac1623c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrpuy"]
+atlas = SubResource("CompressedTexture2D_5x5vq")
+region = Rect2(11, 59, 26, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6naka"]
+texture = SubResource("AtlasTexture_vrpuy")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 6.0
+
+[resource]
+Dark/base_type = &"PanelContainer"
+Dark/styles/panel = SubResource("StyleBoxTexture_6q0ak")
+MarginContainer/constants/margin_bottom = 8
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 8
+Tool/base_type = &"Button"
+Tool/styles/focus = null
+Tool/styles/hover = SubResource("StyleBoxTexture_vrpuy")
+Tool/styles/normal = SubResource("StyleBoxTexture_rhore")
+Tool/styles/pressed = SubResource("StyleBoxTexture_6naka")

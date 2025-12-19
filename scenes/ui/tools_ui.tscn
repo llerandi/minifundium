@@ -1,9 +1,20 @@
-[gd_scene format=3 uid="uid://bixb5ma3dsu1r"]
+[gd_scene load_steps=2 format=3 uid="uid://bixb5ma3dsu1r"]
 
-[node name="ToolsUI" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_lkinp"]
+
+[node name="ToolsUI" type="PanelContainer"]
+offset_right = 56.0
+offset_bottom = 56.0
+theme = ExtResource("1_lkinp")
+theme_type_variation = &"Dark"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Axe" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"Tool"
