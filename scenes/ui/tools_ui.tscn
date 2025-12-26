@@ -43,7 +43,7 @@ layout_mode = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="None" type="Button" parent="MarginContainer/HBoxContainer"]
+[node name="NoTool" type="Button" parent="MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
 theme_type_variation = &"Tool"
@@ -71,8 +71,9 @@ theme_type_variation = &"Tool"
 icon = SubResource("AtlasTexture_nu1i1")
 icon_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/None" to="." method="_on_watering_can_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/None" to="." method="_on_none_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/NoTool" to="." method="_on_none_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/NoTool" to="." method="_on_watering_can_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/NoTool" to="." method="_on_no_tool_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/WateringCan" to="." method="_on_watering_can_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Axe" to="." method="_on_axe_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Hoe" to="." method="_on_hoe_pressed"]
