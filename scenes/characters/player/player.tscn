@@ -838,8 +838,6 @@ position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_hss88")
 animation = &"chopping_down"
 autoplay = "front"
-frame = 7
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
