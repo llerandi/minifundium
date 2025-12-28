@@ -17,4 +17,3 @@ func apply_damage(damage: int) -> void:
 	
 	if current_damage == maximum_health:
 		health_depleted.emit()
-		print("Damage: Hola")

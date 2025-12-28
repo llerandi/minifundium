@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://brxhpsbsklqkb"]
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://brxhpsbsklqkb"]
 
 [ext_resource type="Texture2D" uid="uid://dfgndbn0oqb41" path="res://assets/ui/ui_assets_spritesheet.png" id="1_v351s"]
 
@@ -13,6 +13,17 @@ texture_margin_top = 7.0
 texture_margin_right = 7.0
 texture_margin_bottom = 7.0
 region_rect = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v351s"]
+atlas = ExtResource("1_v351s")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5x5vq"]
+texture = SubResource("AtlasTexture_v351s")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrpuy"]
 load_path = "res://.godot/imported/ui_assets_spritesheet.png-e65e7f73d7976a86dd91c5810ac1623c.ctex"
@@ -88,6 +99,10 @@ MarginContainer/constants/margin_bottom = 8
 MarginContainer/constants/margin_left = 8
 MarginContainer/constants/margin_right = 8
 MarginContainer/constants/margin_top = 8
+Resources/base_type = &"PanelContainer"
+Resources/styles/panel = SubResource("StyleBoxTexture_5x5vq")
+ResourcesText/base_type = &"Label"
+ResourcesText/font_sizes/font_size = 14
 Tool/base_type = &"Button"
 Tool/styles/disabled = SubResource("StyleBoxTexture_22v0e")
 Tool/styles/focus = SubResource("StyleBoxTexture_nenup")

@@ -10,7 +10,7 @@ radius = 3.0
 texture = ExtResource("1_h24f5")
 
 [node name="Pickup" parent="." instance=ExtResource("2_06pa5")]
-item_pickup = "log"
+item_pickup = "sapling"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
 position = Vector2(1, 1)
