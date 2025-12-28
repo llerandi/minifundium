@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://cpemcahxw4adj"]
+[gd_scene load_steps=6 format=4 uid="uid://cpemcahxw4adj"]
 
 [ext_resource type="TileSet" uid="uid://dvxbj3gbyh4iq" path="res://tilesets/game_tile_set.tres" id="1_rchkx"]
 [ext_resource type="PackedScene" uid="uid://dxrf6wi26ljgs" path="res://scenes/characters/player/player.tscn" id="2_hnpg3"]
 [ext_resource type="PackedScene" uid="uid://30j5f7nn3arv" path="res://scenes/ui/game_ui.tscn" id="3_hnpg3"]
+[ext_resource type="PackedScene" uid="uid://j2nhutyhdwqu" path="res://scenes/objects/environment/trees/sapling.tscn" id="4_wcdqp"]
+[ext_resource type="PackedScene" uid="uid://hx482aol0hcs" path="res://scenes/objects/environment/trees/log.tscn" id="5_hks1f"]
 
 [node name="TestSceneTilemap" type="Node2D"]
 
@@ -26,7 +28,14 @@ tile_set = ExtResource("1_rchkx")
 
 [node name="Player" parent="." instance=ExtResource("2_hnpg3")]
 position = Vector2(57, 189)
+current_tool = 1
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="GameUI" parent="." instance=ExtResource("3_hnpg3")]
+
+[node name="Sapling" parent="." instance=ExtResource("4_wcdqp")]
+position = Vector2(94, 96)
+
+[node name="Log" parent="." instance=ExtResource("5_hks1f")]
+position = Vector2(125, 86)
