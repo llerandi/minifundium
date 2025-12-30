@@ -30,7 +30,7 @@ func _on_enter() -> void:
 # Called by the state machine just before switching to a new state
 ## For cleanup (e.g., stopping the current animation)
 func _on_exit() -> void:
-	pass
+	sprite.stop()
 
 # Called by the state machine's _process function on every frame
 ## Logic that needs to run continuously but isn't physics-dependent (e.g., checking for input)
