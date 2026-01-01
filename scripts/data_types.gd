@@ -7,3 +7,13 @@ enum Tool {
 	HOE, # To till the soil ground
 	WATERING_CAN, # To watering crops
 }
+
+# This enum prevents typos, instead of writing "seed" or "Seed", will write DataTypes.Growth.SEED
+enum Growth {
+	SEED,
+	PLANTED,
+	GROWING,
+	ALMOST_HARVESTING,
+	READY_HARVESTING,
+	CROP
+}
