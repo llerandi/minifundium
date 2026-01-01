@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://mibvfdyc4c0v"]
+[gd_scene load_steps=8 format=4 uid="uid://mibvfdyc4c0v"]
 
 [ext_resource type="TileSet" uid="uid://dvxbj3gbyh4iq" path="res://tilesets/game_tile_set.tres" id="1_yi8xu"]
 [ext_resource type="PackedScene" uid="uid://dxrf6wi26ljgs" path="res://scenes/characters/player/player.tscn" id="2_wmwcq"]
 [ext_resource type="PackedScene" uid="uid://rkthwr58pq88" path="res://scenes/components/crops_cursor.tscn" id="2_yi8xu"]
 [ext_resource type="PackedScene" uid="uid://30j5f7nn3arv" path="res://scenes/ui/game_ui.tscn" id="3_egjjs"]
 [ext_resource type="Script" uid="uid://6py3ukkfruc3" path="res://scenes/components/crops_cursor.gd" id="3_wmwcq"]
+[ext_resource type="PackedScene" uid="uid://dtttc27sfnrm7" path="res://scenes/components/place_crops_cursor.tscn" id="6_egjjs"]
+[ext_resource type="Script" uid="uid://ciuww603pd2if" path="res://scenes/components/place_crops_cursor.gd" id="7_eaugg"]
 
 [node name="TestSceneTilemap" type="Node2D"]
 
@@ -38,3 +40,6 @@ position = Vector2(57, 189)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="GameUI" parent="." instance=ExtResource("3_egjjs")]
+
+[node name="PlaceCropsCursor" parent="." instance=ExtResource("6_egjjs")]
+script = ExtResource("7_eaugg")
