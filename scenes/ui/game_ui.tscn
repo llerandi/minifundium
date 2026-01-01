@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://30j5f7nn3arv"]
+[gd_scene load_steps=5 format=3 uid="uid://30j5f7nn3arv"]
 
 [ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_xjfbv"]
 [ext_resource type="PackedScene" uid="uid://bixb5ma3dsu1r" path="res://scenes/ui/tools_ui.tscn" id="2_bma8u"]
 [ext_resource type="PackedScene" uid="uid://brtt2h320x0rj" path="res://scenes/ui/resources_ui.tscn" id="3_bma8u"]
+[ext_resource type="PackedScene" uid="uid://cb72lmyml655w" path="res://scenes/ui/game_time_cycle_ui.tscn" id="4_fct72"]
 
 [node name="GameUI" type="CanvasLayer"]
 
@@ -23,3 +24,7 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
+
+[node name="GameTimeCycleUI" parent="MarginContainer" instance=ExtResource("4_fct72")]
+layout_mode = 2
+size_flags_horizontal = 8
