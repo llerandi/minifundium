@@ -31,7 +31,6 @@ tile_set = ExtResource("1_yi8xu")
 script = ExtResource("3_wmwcq")
 grass_layer = NodePath("../GameTileMap/Grass")
 tilled_layer = NodePath("../GameTileMap/Tilled")
-terrain = 2
 
 [node name="Player" parent="." instance=ExtResource("2_wmwcq")]
 position = Vector2(57, 189)
