@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb72lmyml655w"]
+[gd_scene load_steps=7 format=3 uid="uid://cb72lmyml655w"]
 
 [ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_mpyy2"]
+[ext_resource type="Script" uid="uid://cvt8qtxhgorfh" path="res://scenes/ui/game_time_cycle_ui.gd" id="2_vprui"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mpyy2"]
 load_path = "res://.godot/imported/ui_assets_spritesheet.png-e65e7f73d7976a86dd91c5810ac1623c.ctex"
@@ -20,6 +21,7 @@ region = Rect2(306, 419, 13, 10)
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_mpyy2")
+script = ExtResource("2_vprui")
 
 [node name="Day" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -110,3 +112,6 @@ offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_2hs01")
+
+[connection signal="pressed" from="Control/x1" to="." method="_on_x_1_pressed"]
+[connection signal="pressed" from="Control/x2" to="." method="_on_x_2_pressed"]
