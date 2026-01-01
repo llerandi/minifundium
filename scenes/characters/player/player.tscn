@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dxrf6wi26ljgs"]
+[gd_scene load_steps=119 format=3 uid="uid://dxrf6wi26ljgs"]
 
 [ext_resource type="Texture2D" uid="uid://bmcndjssgvhnd" path="res://assets/game/characters/premium_character_spritesheet.png" id="1_7uws0"]
 [ext_resource type="Script" uid="uid://baq4r2vyybjug" path="res://scenes/characters/player/player.gd" id="1_qd3e3"]
@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://bvbfe65u4ya0a" path="res://scenes/characters/player/idle.gd" id="3_hss88"]
 [ext_resource type="Script" uid="uid://1co27xan5gtv" path="res://scenes/characters/player/movement.gd" id="4_hss88"]
 [ext_resource type="Script" uid="uid://cwqgt7drjt6ni" path="res://scenes/characters/player/woodcutting.gd" id="6_6avc5"]
+[ext_resource type="Script" uid="uid://dtens1mjsbi28" path="res://scenes/characters/player/watering.gd" id="6_42irl"]
 [ext_resource type="PackedScene" uid="uid://bn0bv65mfn3d4" path="res://scenes/components/hitbox.tscn" id="7_mk55u"]
+[ext_resource type="Script" uid="uid://ccm7p0qm0y26n" path="res://scenes/characters/player/tilling.gd" id="8_3xnwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_omk8d"]
 atlas = ExtResource("1_7uws0")
@@ -615,9 +617,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ra07b")
 }],
-"loop": true,
+"loop": false,
 "name": &"tilling_down",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -644,9 +646,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qy81s")
 }],
-"loop": true,
+"loop": false,
 "name": &"tilling_left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -673,9 +675,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uqpui")
 }],
-"loop": true,
+"loop": false,
 "name": &"tilling_right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -702,9 +704,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rijnx")
 }],
-"loop": true,
+"loop": false,
 "name": &"tilling_up",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -731,9 +733,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ro20i")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_down",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -760,9 +762,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2v4cy")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_left",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -789,9 +791,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_es5sa")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_right",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -818,9 +820,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4c5ab")
 }],
-"loop": true,
+"loop": false,
 "name": &"watering_up",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7uws0"]
@@ -836,7 +838,7 @@ script = ExtResource("1_qd3e3")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_hss88")
-animation = &"chopping_down"
+animation = &"watering_up"
 autoplay = "front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -857,11 +859,21 @@ script = ExtResource("4_hss88")
 player = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 
+[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite")]
+script = ExtResource("6_42irl")
+player = NodePath("../..")
+sprite = NodePath("../../AnimatedSprite2D")
+
 [node name="Woodcutting" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite", "hitbox_collision")]
 script = ExtResource("6_6avc5")
 player = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 hitbox_collision = NodePath("../../Hitbox/HitboxCollision")
+
+[node name="Tilling" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite")]
+script = ExtResource("8_3xnwo")
+player = NodePath("../..")
+sprite = NodePath("../../AnimatedSprite2D")
 
 [node name="Hitbox" parent="." instance=ExtResource("7_mk55u")]
 

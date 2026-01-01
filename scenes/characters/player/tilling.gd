@@ -12,10 +12,20 @@ extends State
 @export var player: Player
 @export var sprite: AnimatedSprite2D
 
+func _ready() -> void:
+	pass
+
 # Called by the state machine once when the state becomes active
 ## Setup logic (e.g., starting an animation or enabling a collision shape)
 func _on_enter() -> void:
-	pass
+	if player.direction == Vector2.UP:
+		sprite.play("tilling_up")
+	elif player.direction == Vector2.DOWN:
+		sprite.play("tilling_down")
+	elif player.direction == Vector2.LEFT:
+		sprite.play("tilling_left")
+	elif player.direction == Vector2.RIGHT:
+		sprite.play("tilling_right")
 
 # Called by the state machine just before switching to a new state
 ## For cleanup (e.g., stopping the current animation)
@@ -30,28 +40,9 @@ func _on_process(_delta: float) -> void:
 # Called by the state machine's _physics_process function at a fixed interval
 ## Place for all physics-related code (e.g., moving a character)
 func _on_physics_process(_delta: float) -> void:
-	if player.direction == Vector2.UP:
-		sprite.play("front")
-	elif player.direction == Vector2.DOWN:
-		sprite.play("front")
-	elif player.direction == Vector2.LEFT:
-		sprite.play("front")
-	elif player.direction == Vector2.RIGHT:
-		sprite.play("front")
-	else:
-		sprite.play("front")
+	pass
 
 # Called by the state machine to check the conditions for transitioning to another state
 func _on_next_transitions() -> void:
-	GameInputEvents.movement_input()
-	if GameInputEvents.is_movement_input():
-		transition.emit("Movement")
-	
-	if player.current_tool == DataTypes.Tool.WATERING_CAN && GameInputEvents.use_tool():
-		transition.emit("Watering")
-	
-	if player.current_tool == DataTypes.Tool.AXE && GameInputEvents.use_tool():
-		transition.emit("Woodcutting")
-
-	if player.current_tool == DataTypes.Tool.HOE && GameInputEvents.use_tool():
-		transition.emit("Tilling")
+	if !sprite.is_playing():
+		transition.emit("Idle")

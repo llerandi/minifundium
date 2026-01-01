@@ -9,6 +9,8 @@ signal struck
 func _on_area_entered(area: Area2D) -> void:
 	var hitbox = area as Hitbox
 	
+	print("Player's current_tool variable after entering the tree hurtbox area is: ", DataTypes.Tool.keys()[tool])
+	
 	# It checks if the area that entered is actually a Hitbox
 	if not hitbox:
 		return
