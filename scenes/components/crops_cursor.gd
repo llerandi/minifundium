@@ -39,9 +39,23 @@ func add_tilled_cell() -> void:
 			true
 		)
 
-# When the player uses the tilling tool (hoe)
+# To check if the cell is near the player, and an a valid cell to remove a tilled placed cell and changing back to a grass one
+func remove_tilled_cell() -> void:
+	if distance < 25.0 && cell_id != -1:
+		tilled_layer.set_cells_terrain_connect(
+			[cell_position],
+			0,
+			-1,
+			true
+		)	
+
+# When the player uses the tilling tool (hoe) and is interacting with
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("left_click"):
+	if event.is_action_pressed("left_click"): # While handling a HOE, left mouse click
 		if CurrentTool.current_tool == DataTypes.Tool.HOE:
 			get_cursor_cell()
 			add_tilled_cell()
+	elif event.is_action_pressed("untilling"): # While handling a HOE, right mouse click
+		if CurrentTool.current_tool == DataTypes.Tool.HOE:
+			get_cursor_cell()
+			remove_tilled_cell()
