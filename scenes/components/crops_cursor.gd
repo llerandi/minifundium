@@ -4,7 +4,7 @@ class_name CropsCursor extends Node
 @export var tilled_layer: TileMapLayer
 
 @export var terrain_set: int = 0
-@export var terrain: int = 2
+@export var terrain: int = 1
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 
@@ -31,7 +31,7 @@ func get_cursor_cell() -> void:
 
 # To check if the cell is near the player, and an a valid cell to place a tilled one
 func add_tilled_cell() -> void:
-	if distance < 10.0 && cell_id != -1:
+	if distance < 25.0 && cell_id != -1:
 		tilled_layer.set_cells_terrain_connect(
 			[cell_position],
 			terrain_set,
