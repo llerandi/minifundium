@@ -18,17 +18,15 @@ region = Rect2(306, 419, 13, 10)
 
 [node name="GameTimeCycleUI" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 theme = ExtResource("1_mpyy2")
 
 [node name="Day" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -118.0
+offset_top = 1.0
+offset_right = -61.0
+offset_bottom = 41.0
 theme_type_variation = &"GameTime"
 
 [node name="MarginContainer" type="MarginContainer" parent="Day"]
@@ -45,9 +43,10 @@ text = "Day 0"
 
 [node name="Time" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 60.0
-offset_right = 117.0
-offset_bottom = 40.0
+offset_left = -58.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 41.0
 theme_type_variation = &"GameTime"
 
 [node name="MarginContainer" type="MarginContainer" parent="Time"]
@@ -64,10 +63,10 @@ text = "00:00"
 
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 60.0
-offset_top = 41.0
-offset_right = 100.0
-offset_bottom = 61.0
+offset_left = -58.0
+offset_top = 42.0
+offset_right = -18.0
+offset_bottom = 62.0
 
 [node name="x1" type="Button" parent="Control"]
 layout_mode = 0
