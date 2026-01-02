@@ -52,7 +52,7 @@ func remove_crop() -> void:
 			if crop.global_position == current_cell_position:
 				crop.queue_free()
 
-# When the player uses the seeds and is interacting with
+# When the player uses the seeds (hoe) and is interacting with
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"): # While handling a SEED, left mouse click
 		if CurrentTool.current_tool == DataTypes.Tool.CARROT_SEEDS:
@@ -65,6 +65,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_cursor_cell()
 			add_crop()
 	elif event.is_action_pressed("remove"): # While handling a WATERING CAN, right mouse click
-		if CurrentTool.current_tool == DataTypes.Tool.WATERING_CANssssss:
+		if CurrentTool.current_tool == DataTypes.Tool.WATERING_CAN:
 			get_cursor_cell()
 			remove_crop()
