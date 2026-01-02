@@ -11,6 +11,7 @@
 size = Vector2(8.5, 4.625)
 
 [node name="Carrot" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_evaeq")
 
 [node name="CarrotSprite" type="Sprite2D" parent="."]
