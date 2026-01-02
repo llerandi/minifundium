@@ -18,18 +18,18 @@ theme = ExtResource("1_xjfbv")
 
 [node name="ToolsUI" parent="MarginContainer" instance=ExtResource("2_bma8u")]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 size_flags_vertical = 8
 
 [node name="SeedsUI" parent="MarginContainer" instance=ExtResource("3_ru5ln")]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 8
 size_flags_vertical = 8
 
 [node name="ResourcesUI" parent="MarginContainer" instance=ExtResource("3_bma8u")]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 4
+size_flags_vertical = 8
 
 [node name="GameTimeCycleUI" parent="MarginContainer" instance=ExtResource("4_fct72")]
 layout_mode = 2
