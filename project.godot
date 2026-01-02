@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 CurrentTool="*res://scripts/current_tool.gd"
 Resources="*res://scripts/resources.gd"
 GameTime="*res://scripts/game_time.gd"
+Game="*res://scripts/game.gd"
+SceneHandler="*res://scripts/scene_handler.gd"
 
 [display]
 
