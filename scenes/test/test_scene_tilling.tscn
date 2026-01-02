@@ -62,5 +62,6 @@ position = Vector2(57, 189)
 
 [node name="GameUI" parent="." instance=ExtResource("3_egjjs")]
 
-[node name="PlaceCropsCursor" parent="." instance=ExtResource("6_egjjs")]
+[node name="PlaceCropsCursor" parent="." node_paths=PackedStringArray("tilled_layer") instance=ExtResource("6_egjjs")]
 script = ExtResource("7_eaugg")
+tilled_layer = NodePath("../GameTileMap/Tilled")
