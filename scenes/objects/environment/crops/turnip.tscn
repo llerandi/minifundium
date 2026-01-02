@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1m3bj6v2sny8"]
+
+[ext_resource type="Script" uid="uid://db1ccya4351sa" path="res://scenes/objects/environment/crops/turnip.gd" id="1_3v3gp"]
+[ext_resource type="Texture2D" uid="uid://cw1vpec276ugo" path="res://assets/game/environment/vegetables/growing_turnip_spritesheet.png" id="2_mv81w"]
+[ext_resource type="PackedScene" uid="uid://pagve6op1tcm" path="res://scenes/objects/environment/crops/particles.tscn" id="3_56653"]
+[ext_resource type="PackedScene" uid="uid://cvcqi18g2ngid" path="res://scenes/objects/environment/crops/particles_growing.tscn" id="4_dutad"]
+[ext_resource type="PackedScene" uid="uid://ommmu2240rt0" path="res://scenes/objects/environment/crops/growth.tscn" id="5_wvs6e"]
+[ext_resource type="PackedScene" uid="uid://jqwfjlb1373t" path="res://scenes/components/hurtbox.tscn" id="6_0co8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evaeq"]
+size = Vector2(8.5, 4.625)
+
+[node name="Turnip" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_3v3gp")
+
+[node name="TurnipSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("2_mv81w")
+hframes = 4
+region_rect = Rect2(4, 10, 7, 4)
+
+[node name="Particles" parent="." instance=ExtResource("3_56653")]
+
+[node name="ParticlesGrowing" parent="." instance=ExtResource("4_dutad")]
+position = Vector2(2, 0)
+
+[node name="Growth" parent="." instance=ExtResource("5_wvs6e")]
+
+[node name="Hurtbox" parent="." instance=ExtResource("6_0co8e")]
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_evaeq")

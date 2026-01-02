@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doejhpiadp72h"
-path="res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+uid="uid://2hrh61vq5uqn"
+path="res://.godot/imported/beet_spritesheet.png-619f29c351e6d4d8b4e1757a14eeca37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/environment/vegetables/growing_carrot_spritesheet.png"
-dest_files=["res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"]
+source_file="res://assets/game/environment/vegetables/beet_spritesheet.png"
+dest_files=["res://.godot/imported/beet_spritesheet.png-619f29c351e6d4d8b4e1757a14eeca37.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doejhpiadp72h"
-path="res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+uid="uid://cw1vpec276ugo"
+path="res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/environment/vegetables/growing_carrot_spritesheet.png"
-dest_files=["res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"]
+source_file="res://assets/game/environment/vegetables/growing_turnip_spritesheet.png"
+dest_files=["res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"]
 
 [params]
 

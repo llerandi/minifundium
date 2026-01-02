@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://30j5f7nn3arv"]
+[gd_scene load_steps=6 format=3 uid="uid://30j5f7nn3arv"]
 
 [ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_xjfbv"]
 [ext_resource type="PackedScene" uid="uid://bixb5ma3dsu1r" path="res://scenes/ui/tools_ui.tscn" id="2_bma8u"]
 [ext_resource type="PackedScene" uid="uid://brtt2h320x0rj" path="res://scenes/ui/resources_ui.tscn" id="3_bma8u"]
+[ext_resource type="PackedScene" uid="uid://d08q1shbyenye" path="res://scenes/ui/seeds_ui.tscn" id="3_ru5ln"]
+[ext_resource type="PackedScene" uid="uid://cb72lmyml655w" path="res://scenes/ui/game_time_cycle_ui.tscn" id="4_fct72"]
 
 [node name="GameUI" type="CanvasLayer"]
 
@@ -16,10 +18,19 @@ theme = ExtResource("1_xjfbv")
 
 [node name="ToolsUI" parent="MarginContainer" instance=ExtResource("2_bma8u")]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+
+[node name="SeedsUI" parent="MarginContainer" instance=ExtResource("3_ru5ln")]
+layout_mode = 2
+size_flags_horizontal = 8
 size_flags_vertical = 8
 
 [node name="ResourcesUI" parent="MarginContainer" instance=ExtResource("3_bma8u")]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 4
+size_flags_vertical = 8
+
+[node name="GameTimeCycleUI" parent="MarginContainer" instance=ExtResource("4_fct72")]
+layout_mode = 2
+size_flags_horizontal = 8

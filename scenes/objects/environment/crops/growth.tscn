@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ommmu2240rt0"]
+
+[ext_resource type="Script" uid="uid://c3x5gbvyfx1ur" path="res://scenes/objects/environment/crops/growth.gd" id="1_pyphe"]
+
+[node name="Growth" type="Node"]
+script = ExtResource("1_pyphe")

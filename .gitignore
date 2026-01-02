@@ -3,3 +3,4 @@
 /android/
 executable/
 export_presets.cfg
+*.tmp

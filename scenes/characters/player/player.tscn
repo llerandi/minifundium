@@ -831,14 +831,14 @@ radius = 6.0827627
 [sub_resource type="CircleShape2D" id="CircleShape2D_xuses"]
 radius = 3.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_qd3e3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_hss88")
-animation = &"watering_up"
+animation = &"front"
 autoplay = "front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -859,10 +859,11 @@ script = ExtResource("4_hss88")
 player = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 
-[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite")]
+[node name="Watering" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite", "hitbox_collision")]
 script = ExtResource("6_42irl")
 player = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
+hitbox_collision = NodePath("../../Hitbox/HitboxCollision")
 
 [node name="Woodcutting" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "sprite", "hitbox_collision")]
 script = ExtResource("6_6avc5")
