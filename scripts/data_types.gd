@@ -6,6 +6,9 @@ enum Tool {
 	AXE, # To chop down trees
 	HOE, # To till the soil ground
 	WATERING_CAN, # To watering crops
+	CARROT_SEEDS, # Seeds for planting carrots
+	TURNIP_SEEDS, # Seeds for planting turnips
+	BEET_SEED # Seeds for planting beets
 }
 
 # This enum prevents typos, instead of writing "seed" or "Seed", will write DataTypes.Growth.SEED
