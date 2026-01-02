@@ -1,6 +1,8 @@
 extends PanelContainer
 
 @onready var carrots_quantity: Label = $MarginContainer/VBoxContainer/Carrots/CarrotsQuantity
+@onready var turnips_quantity: Label = $MarginContainer/VBoxContainer/Turnips/TurnipsQuantity
+@onready var beets_quantity: Label = $MarginContainer/VBoxContainer/Beets/BeetsQuantity
 @onready var logs_quantity: Label = $MarginContainer/VBoxContainer/Logs/LogsQuantity
 @onready var saplings_quantity: Label = $MarginContainer/VBoxContainer/Saplings/SaplingsQuantity
 
@@ -9,6 +11,12 @@ func on_quantity_changed() -> void:
 	
 	if resource.has("carrot"):
 		carrots_quantity.text = str(resource["carrot"])
+		
+	if resource.has("carrot"):
+		carrots_quantity.text = str(resource["turnip"])
+		
+	if resource.has("carrot"):
+		carrots_quantity.text = str(resource["beet"])	
 		
 	if resource.has("log"):
 		logs_quantity.text = str(resource["log"])
