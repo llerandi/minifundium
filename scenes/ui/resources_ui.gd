@@ -12,11 +12,11 @@ func on_quantity_changed() -> void:
 	if resource.has("carrot"):
 		carrots_quantity.text = str(resource["carrot"])
 		
-	if resource.has("carrot"):
-		carrots_quantity.text = str(resource["turnip"])
+	if resource.has("turnip"):
+		turnips_quantity.text = str(resource["turnip"])
 		
-	if resource.has("carrot"):
-		carrots_quantity.text = str(resource["beet"])	
+	if resource.has("beet"):
+		beets_quantity.text = str(resource["beet"])	
 		
 	if resource.has("log"):
 		logs_quantity.text = str(resource["log"])
