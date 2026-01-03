@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://baqk7fufafwvk"]
+
+[ext_resource type="Texture2D" uid="uid://oxl1d4nklwhv" path="res://assets/game/environment/water_objects_spritesheet.png" id="1_vvbnw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5pri"]
+atlas = ExtResource("1_vvbnw")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvbnw"]
+size = Vector2(30, 9)
+
+[node name="WaterRock" type="Sprite2D"]
+texture = SubResource("AtlasTexture_q5pri")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vvbnw")
