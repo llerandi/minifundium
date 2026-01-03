@@ -13,6 +13,7 @@ script = ExtResource("1_1g8jr")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 63.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_sl1te")
@@ -58,32 +59,6 @@ text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 30)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_type_variation = &"MainMenuButton"
-text = "
-"
-
-[node name="SaveButtonText" type="Label" parent="MarginContainer/VBoxContainer/SaveButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Save"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
@@ -107,6 +82,17 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="GameVersionText" type="Label" parent="MarginContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "v0.1.0 (alpha)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
