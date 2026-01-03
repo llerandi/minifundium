@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="minifundium"
-run/main_scene="uid://ctmtkswsv7qti"
+run/main_scene="uid://dlnmtfcts6nyv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -82,6 +82,8 @@ remove={
 2d_physics/layer_3="hitboxes"
 2d_physics/layer_4="destructibles"
 2d_physics/layer_5="pickups"
+avoidance/layer_1="Water"
+avoidance/layer_2="Player"
 
 [rendering]
 
