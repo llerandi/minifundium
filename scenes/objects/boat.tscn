@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://caoa0dwkbi7t2"]
+
+[ext_resource type="Texture2D" uid="uid://dqnntn0qfxtwm" path="res://assets/game/objects/boats.png" id="1_es54b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5pri"]
+atlas = ExtResource("1_es54b")
+region = Rect2(6, 43, 33, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvbnw"]
+size = Vector2(30, 14.5)
+
+[node name="Boat" type="Sprite2D"]
+texture = SubResource("AtlasTexture_q5pri")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -1.75)
+shape = SubResource("RectangleShape2D_vvbnw")

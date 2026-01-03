@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmsffvxtwd3yp"]
+
+[ext_resource type="Texture2D" uid="uid://oxl1d4nklwhv" path="res://assets/game/environment/water_objects_spritesheet.png" id="1_0nafp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5pri"]
+atlas = ExtResource("1_0nafp")
+region = Rect2(3, 6, 9, 6)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yturp"]
+radius = 3.0
+
+[node name="SmallWaterRock" type="Sprite2D"]
+texture = SubResource("AtlasTexture_q5pri")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_yturp")
