@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj0ma4183ts87"]
+
+[ext_resource type="Texture2D" uid="uid://kv376yqfkrfn" path="res://assets/game/environment/vegetables/carrot_spritesheet.png" id="1_3dv4o"]
+[ext_resource type="PackedScene" uid="uid://cgf06j22u1y6q" path="res://scenes/components/pickup.tscn" id="2_qhane"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxr11"]
+atlas = ExtResource("1_3dv4o")
+region = Rect2(16, 0, 15, 15)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdtp5"]
+radius = 8.0
+
+[node name="HarvestingCarrot" type="Sprite2D"]
+texture = SubResource("AtlasTexture_bxr11")
+
+[node name="Pickup" parent="." instance=ExtResource("2_qhane")]
+item_pickup = "carrot"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_kdtp5")

@@ -1,0 +1,135 @@
+[gd_scene load_steps=13 format=3 uid="uid://brtt2h320x0rj"]
+
+[ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_clmgq"]
+[ext_resource type="Script" uid="uid://c3q6rja0c0m0t" path="res://scenes/ui/resources_ui.gd" id="2_xt75p"]
+[ext_resource type="Texture2D" uid="uid://cvqvs6t73tqjk" path="res://assets/game/environment/vegetables/turnip_spritesheet.png" id="3_6g7ld"]
+[ext_resource type="Texture2D" uid="uid://64bgm452f6iy" path="res://assets/game/environment/trees/sapling.png" id="3_h3moc"]
+[ext_resource type="Texture2D" uid="uid://2hrh61vq5uqn" path="res://assets/game/environment/vegetables/beet_spritesheet.png" id="4_5m5pd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2iuf2"]
+load_path = "res://.godot/imported/carrot_spritesheet.png-21eef3a7e40bba1973b5da18952f813e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfej5"]
+atlas = SubResource("CompressedTexture2D_2iuf2")
+region = Rect2(16, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4x56r"]
+atlas = ExtResource("3_6g7ld")
+region = Rect2(16, 0, 15, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sskk5"]
+atlas = ExtResource("4_5m5pd")
+region = Rect2(16, 0, 15, 15)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xt75p"]
+load_path = "res://.godot/imported/log.png-ff77a3f97b6123130b41256d7dbf6929.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3moc"]
+atlas = SubResource("CompressedTexture2D_xt75p")
+region = Rect2(1, 1, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g7ld"]
+atlas = ExtResource("3_h3moc")
+region = Rect2(-2, -5, 12, 18)
+
+[node name="ResourcesUI" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("1_clmgq")
+theme_type_variation = &"Dark"
+script = ExtResource("2_xt75p")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Carrots" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(38, 30)
+layout_mode = 2
+theme_type_variation = &"Resources"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Carrots"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_lfej5")
+
+[node name="CarrotsQuantity" type="Label" parent="MarginContainer/VBoxContainer/Carrots"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"ResourcesText"
+text = "0"
+
+[node name="Turnips" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(38, 30)
+layout_mode = 2
+theme_type_variation = &"Resources"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Turnips"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_4x56r")
+
+[node name="TurnipsQuantity" type="Label" parent="MarginContainer/VBoxContainer/Turnips"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"ResourcesText"
+text = "0"
+
+[node name="Beets" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(38, 30)
+layout_mode = 2
+theme_type_variation = &"Resources"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Beets"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_sskk5")
+
+[node name="BeetsQuantity" type="Label" parent="MarginContainer/VBoxContainer/Beets"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"ResourcesText"
+text = "0"
+
+[node name="Logs" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(38, 30)
+layout_mode = 2
+theme_type_variation = &"Resources"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Logs"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_h3moc")
+
+[node name="LogsQuantity" type="Label" parent="MarginContainer/VBoxContainer/Logs"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"ResourcesText"
+text = "0"
+
+[node name="Saplings" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(38, 30)
+layout_mode = 2
+theme_type_variation = &"Resources"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Saplings"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("AtlasTexture_6g7ld")
+
+[node name="SaplingsQuantity" type="Label" parent="MarginContainer/VBoxContainer/Saplings"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_type_variation = &"ResourcesText"
+text = "0"

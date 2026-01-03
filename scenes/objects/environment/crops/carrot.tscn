@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2ybrqct15n1v"]
+
+[ext_resource type="Script" uid="uid://4iwjqhyry8jt" path="res://scenes/objects/environment/crops/carrot.gd" id="1_evaeq"]
+[ext_resource type="Texture2D" uid="uid://doejhpiadp72h" path="res://assets/game/environment/vegetables/growing_carrot_spritesheet.png" id="1_ri1rg"]
+[ext_resource type="PackedScene" uid="uid://jqwfjlb1373t" path="res://scenes/components/hurtbox.tscn" id="2_1tmcw"]
+[ext_resource type="PackedScene" uid="uid://pagve6op1tcm" path="res://scenes/objects/environment/crops/particles.tscn" id="2_6lbfj"]
+[ext_resource type="PackedScene" uid="uid://ommmu2240rt0" path="res://scenes/objects/environment/crops/growth.tscn" id="3_6lbfj"]
+[ext_resource type="PackedScene" uid="uid://cvcqi18g2ngid" path="res://scenes/objects/environment/crops/particles_growing.tscn" id="4_qsmcc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evaeq"]
+size = Vector2(8.5, 4.625)
+
+[node name="Carrot" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_evaeq")
+
+[node name="CarrotSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_ri1rg")
+hframes = 4
+region_rect = Rect2(4, 10, 7, 4)
+
+[node name="Particles" parent="." instance=ExtResource("2_6lbfj")]
+
+[node name="ParticlesGrowing" parent="." instance=ExtResource("4_qsmcc")]
+position = Vector2(2, 0)
+
+[node name="Growth" parent="." instance=ExtResource("3_6lbfj")]
+
+[node name="Hurtbox" parent="." instance=ExtResource("2_1tmcw")]
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_evaeq")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://hx482aol0hcs"]
+
+[ext_resource type="Texture2D" uid="uid://dljntjowfl2t8" path="res://assets/game/environment/trees/trees_stumps_bushes_spritesheet.png" id="1_u4aov"]
+[ext_resource type="PackedScene" uid="uid://cgf06j22u1y6q" path="res://scenes/components/pickup.tscn" id="2_q5pri"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5pri"]
+atlas = ExtResource("1_u4aov")
+region = Rect2(116, 97, 23, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4sjtc"]
+radius = 7.0
+
+[node name="Log" type="Sprite2D"]
+texture = SubResource("AtlasTexture_q5pri")
+
+[node name="Pickup" parent="." instance=ExtResource("2_q5pri")]
+item_pickup = "log"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_4sjtc")

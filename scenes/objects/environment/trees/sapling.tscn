@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://j2nhutyhdwqu"]
+
+[ext_resource type="Texture2D" uid="uid://64bgm452f6iy" path="res://assets/game/environment/trees/sapling.png" id="1_h24f5"]
+[ext_resource type="PackedScene" uid="uid://cgf06j22u1y6q" path="res://scenes/components/pickup.tscn" id="2_06pa5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1eyf3"]
+radius = 3.0
+
+[node name="Sapling" type="Sprite2D"]
+texture = ExtResource("1_h24f5")
+
+[node name="Pickup" parent="." instance=ExtResource("2_06pa5")]
+item_pickup = "sapling"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pickup"]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_1eyf3")

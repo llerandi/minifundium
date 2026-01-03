@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://d08q1shbyenye"]
+
+[ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_lp4m1"]
+[ext_resource type="Script" uid="uid://dcid6racc5elm" path="res://scenes/ui/seeds_ui.gd" id="2_42ais"]
+[ext_resource type="Texture2D" uid="uid://kv376yqfkrfn" path="res://assets/game/environment/vegetables/carrot_spritesheet.png" id="3_wc3hy"]
+[ext_resource type="Texture2D" uid="uid://cvqvs6t73tqjk" path="res://assets/game/environment/vegetables/turnip_spritesheet.png" id="4_ft8qs"]
+[ext_resource type="Texture2D" uid="uid://2hrh61vq5uqn" path="res://assets/game/environment/vegetables/beet_spritesheet.png" id="5_4hgmk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff4qg"]
+atlas = ExtResource("3_wc3hy")
+region = Rect2(0, 0, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gan1i"]
+atlas = ExtResource("4_ft8qs")
+region = Rect2(0, 0, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hahut"]
+atlas = ExtResource("5_4hgmk")
+region = Rect2(0, 0, 14, 15)
+
+[node name="SeedsUI" type="PanelContainer"]
+offset_right = 56.0
+offset_bottom = 56.0
+theme = ExtResource("1_lp4m1")
+theme_type_variation = &"Dark"
+script = ExtResource("2_42ais")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CarrotSeeds" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"Tool"
+icon = SubResource("AtlasTexture_ff4qg")
+icon_alignment = 1
+
+[node name="TurnipSeeds" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"Tool"
+icon = SubResource("AtlasTexture_gan1i")
+icon_alignment = 1
+
+[node name="BeetSeeds" type="Button" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+theme_type_variation = &"Tool"
+icon = SubResource("AtlasTexture_hahut")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/CarrotSeeds" to="." method="_on_carrot_seeds_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/TurnipSeeds" to="." method="_on_turnip_seeds_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/BeetSeeds" to="." method="_on_beet_seeds_pressed"]

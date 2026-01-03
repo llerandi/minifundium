@@ -1,0 +1,1153 @@
+[gd_scene load_steps=190 format=4 uid="uid://craum7gcinrq7"]
+
+[ext_resource type="TileSet" uid="uid://dvxbj3gbyh4iq" path="res://tilesets/game_tile_set.tres" id="1_pg4je"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s1l0w"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aagh5"]
+atlas = SubResource("CompressedTexture2D_s1l0w")
+region = Rect2(5, 7, 7, 4)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_birrt"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3rx0"]
+atlas = SubResource("CompressedTexture2D_birrt")
+region = Rect2(35, 2, 10, 11)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t144h"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp5h0"]
+atlas = SubResource("CompressedTexture2D_t144h")
+region = Rect2(35, 2, 10, 11)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pg4je"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyt1i"]
+atlas = SubResource("CompressedTexture2D_pg4je")
+region = Rect2(20, 5, 8, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q76b8"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg5ck"]
+atlas = SubResource("CompressedTexture2D_q76b8")
+region = Rect2(20, 5, 8, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xeia1"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbnu1"]
+atlas = SubResource("CompressedTexture2D_xeia1")
+region = Rect2(5, 7, 7, 4)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ae8s"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwmpf"]
+atlas = SubResource("CompressedTexture2D_8ae8s")
+region = Rect2(35, 2, 10, 11)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_24jjl"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f7o4"]
+atlas = SubResource("CompressedTexture2D_24jjl")
+region = Rect2(49, 0, 15, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ixj26"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1rio"]
+atlas = SubResource("CompressedTexture2D_ixj26")
+region = Rect2(49, 0, 15, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sh50p"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hrvq"]
+atlas = SubResource("CompressedTexture2D_sh50p")
+region = Rect2(49, 0, 15, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bhxm7"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8w1l"]
+atlas = SubResource("CompressedTexture2D_bhxm7")
+region = Rect2(35, 2, 10, 11)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_723ow"]
+load_path = "res://.godot/imported/growing_carrot_spritesheet.png-4e9307fbc0e18c9dd9132c18e8c4950e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e23jb"]
+atlas = SubResource("CompressedTexture2D_723ow")
+region = Rect2(20, 5, 8, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1j2va"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htnfv"]
+atlas = SubResource("CompressedTexture2D_1j2va")
+region = Rect2(49, 0, 13, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m4ulk"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctv37"]
+atlas = SubResource("CompressedTexture2D_m4ulk")
+region = Rect2(34, 2, 11, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_myta3"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0e2t"]
+atlas = SubResource("CompressedTexture2D_myta3")
+region = Rect2(5, 7, 6, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xvrbh"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elohh"]
+atlas = SubResource("CompressedTexture2D_xvrbh")
+region = Rect2(20, 5, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sidqs"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4ecf"]
+atlas = SubResource("CompressedTexture2D_sidqs")
+region = Rect2(20, 5, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_llxwa"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbdnt"]
+atlas = SubResource("CompressedTexture2D_llxwa")
+region = Rect2(34, 2, 11, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s2cry"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1htdv"]
+atlas = SubResource("CompressedTexture2D_s2cry")
+region = Rect2(5, 7, 6, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mefq2"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dw1b"]
+atlas = SubResource("CompressedTexture2D_mefq2")
+region = Rect2(49, 0, 13, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hdc8t"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duaqg"]
+atlas = SubResource("CompressedTexture2D_hdc8t")
+region = Rect2(49, 0, 13, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uvvwb"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvd3t"]
+atlas = SubResource("CompressedTexture2D_uvvwb")
+region = Rect2(20, 5, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aawy5"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toeef"]
+atlas = SubResource("CompressedTexture2D_aawy5")
+region = Rect2(34, 2, 11, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l3t20"]
+load_path = "res://.godot/imported/growing_turnip_spritesheet.png-48172154537428986c1be2bc6d85f520.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nagua"]
+atlas = SubResource("CompressedTexture2D_l3t20")
+region = Rect2(34, 2, 11, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aagh5"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_birrt"]
+atlas = SubResource("CompressedTexture2D_aagh5")
+region = Rect2(5, 9, 6, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n3rx0"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t144h"]
+atlas = SubResource("CompressedTexture2D_n3rx0")
+region = Rect2(20, 7, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yp5h0"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg4je"]
+atlas = SubResource("CompressedTexture2D_yp5h0")
+region = Rect2(20, 7, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wyt1i"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q76b8"]
+atlas = SubResource("CompressedTexture2D_wyt1i")
+region = Rect2(48, 0, 15, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pg5ck"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeia1"]
+atlas = SubResource("CompressedTexture2D_pg5ck")
+region = Rect2(34, 3, 11, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pbnu1"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ae8s"]
+atlas = SubResource("CompressedTexture2D_pbnu1")
+region = Rect2(20, 7, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwmpf"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24jjl"]
+atlas = SubResource("CompressedTexture2D_nwmpf")
+region = Rect2(20, 7, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3f7o4"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixj26"]
+atlas = SubResource("CompressedTexture2D_3f7o4")
+region = Rect2(5, 9, 6, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n1rio"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh50p"]
+atlas = SubResource("CompressedTexture2D_n1rio")
+region = Rect2(48, 0, 15, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4hrvq"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhxm7"]
+atlas = SubResource("CompressedTexture2D_4hrvq")
+region = Rect2(34, 3, 11, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d8w1l"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_723ow"]
+atlas = SubResource("CompressedTexture2D_d8w1l")
+region = Rect2(48, 0, 15, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e23jb"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j2va"]
+atlas = SubResource("CompressedTexture2D_e23jb")
+region = Rect2(48, 0, 15, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_htnfv"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4ulk"]
+atlas = SubResource("CompressedTexture2D_htnfv")
+region = Rect2(34, 3, 11, 13)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ctv37"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myta3"]
+atlas = SubResource("CompressedTexture2D_ctv37")
+region = Rect2(20, 7, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n0e2t"]
+load_path = "res://.godot/imported/growing_beet_spritesheet.png-8f967c968dd481301e1c554754fc3761.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvrbh"]
+atlas = SubResource("CompressedTexture2D_n0e2t")
+region = Rect2(20, 7, 8, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_elohh"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sidqs"]
+atlas = SubResource("CompressedTexture2D_elohh")
+region = Rect2(20, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r4ecf"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llxwa"]
+atlas = SubResource("CompressedTexture2D_r4ecf")
+region = Rect2(116, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gbdnt"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2cry"]
+atlas = SubResource("CompressedTexture2D_gbdnt")
+region = Rect2(20, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1htdv"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mefq2"]
+atlas = SubResource("CompressedTexture2D_1htdv")
+region = Rect2(84, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0dw1b"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdc8t"]
+atlas = SubResource("CompressedTexture2D_0dw1b")
+region = Rect2(52, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_duaqg"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvvwb"]
+atlas = SubResource("CompressedTexture2D_duaqg")
+region = Rect2(20, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dvd3t"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aawy5"]
+atlas = SubResource("CompressedTexture2D_dvd3t")
+region = Rect2(148, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_toeef"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3t20"]
+atlas = SubResource("CompressedTexture2D_toeef")
+region = Rect2(20, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nagua"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuume"]
+atlas = SubResource("CompressedTexture2D_nagua")
+region = Rect2(20, 0, 24, 31)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ttx1"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxhd0"]
+atlas = SubResource("CompressedTexture2D_8ttx1")
+region = Rect2(19, 100, 10, 10)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2fn4o"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qxul"]
+atlas = SubResource("CompressedTexture2D_2fn4o")
+region = Rect2(96, 100, 16, 10)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jppp0"]
+load_path = "res://.godot/imported/trees_stumps_bushes_spritesheet.png-33f0b115ba7e9a334c24b9446070d709.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5il25"]
+atlas = SubResource("CompressedTexture2D_jppp0")
+region = Rect2(116, 97, 23, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pd3p5"]
+load_path = "res://.godot/imported/premium_character_spritesheet.png-5c25d9f2988e58318dca24e5351533a8.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiyqw"]
+atlas = SubResource("CompressedTexture2D_pd3p5")
+region = Rect2(69, 928, 19, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yxocu"]
+load_path = "res://.godot/imported/premium_character_spritesheet.png-5c25d9f2988e58318dca24e5351533a8.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqi4v"]
+atlas = SubResource("CompressedTexture2D_yxocu")
+region = Rect2(96, 1112, 32, 24)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hklhj"]
+load_path = "res://.godot/imported/premium_character_spritesheet.png-5c25d9f2988e58318dca24e5351533a8.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2trp7"]
+atlas = SubResource("CompressedTexture2D_hklhj")
+region = Rect2(159, 975, 16, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cpaaa"]
+load_path = "res://.godot/imported/premium_character_spritesheet.png-5c25d9f2988e58318dca24e5351533a8.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7xym"]
+atlas = SubResource("CompressedTexture2D_cpaaa")
+region = Rect2(65, 207, 14, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ah10"]
+load_path = "res://.godot/imported/red_chicken_baby_spritesheet.png-b3bfe1dcba1d5deaa3ac314b7223e0ff.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmnp6"]
+atlas = SubResource("CompressedTexture2D_8ah10")
+region = Rect2(35, 5, 9, 10)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vsbdg"]
+load_path = "res://.godot/imported/red_chicken_baby_spritesheet.png-b3bfe1dcba1d5deaa3ac314b7223e0ff.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wo48"]
+atlas = SubResource("CompressedTexture2D_vsbdg")
+region = Rect2(83, 104, 9, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ge6yy"]
+load_path = "res://.godot/imported/red_chicken_baby_spritesheet.png-b3bfe1dcba1d5deaa3ac314b7223e0ff.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lw5g"]
+atlas = SubResource("CompressedTexture2D_ge6yy")
+region = Rect2(68, 151, 8, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnu2a"]
+load_path = "res://.godot/imported/red_chicken_spritesheet.png-e54b7bfefcc7fd29d29038b09adb5145.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qvku"]
+atlas = SubResource("CompressedTexture2D_hnu2a")
+region = Rect2(16, 400, 16, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1p1ke"]
+load_path = "res://.godot/imported/green_cow_spritesheet.png-42d80d1c7f34d96e048649d786116d70.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gr02a"]
+atlas = SubResource("CompressedTexture2D_1p1ke")
+region = Rect2(35, 110, 27, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oecfu"]
+load_path = "res://.godot/imported/green_cow_spritesheet.png-42d80d1c7f34d96e048649d786116d70.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqlx2"]
+atlas = SubResource("CompressedTexture2D_oecfu")
+region = Rect2(67, 229, 27, 25)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_plhg2"]
+load_path = "res://.godot/imported/boats.png-8922b8984af2a6c025bd0822b55af5f0.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmx3x"]
+atlas = SubResource("CompressedTexture2D_plhg2")
+region = Rect2(54, 44, 33, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2ay11"]
+load_path = "res://.godot/imported/boats.png-8922b8984af2a6c025bd0822b55af5f0.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg4ls"]
+atlas = SubResource("CompressedTexture2D_2ay11")
+region = Rect2(54, 44, 33, 17)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_421id"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruqhp"]
+atlas = SubResource("CompressedTexture2D_421id")
+region = Rect2(65, 0, 30, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cuume"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ttx1"]
+atlas = SubResource("CompressedTexture2D_cuume")
+region = Rect2(65, 0, 30, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w0doq"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urdud"]
+atlas = SubResource("CompressedTexture2D_w0doq")
+region = Rect2(65, 0, 30, 26)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xme13"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m47dn"]
+atlas = SubResource("CompressedTexture2D_xme13")
+region = Rect2(32, 3, 32, 29)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cq6st"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1psu"]
+atlas = SubResource("CompressedTexture2D_cq6st")
+region = Rect2(19, 5, 10, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qdwsq"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx0ef"]
+atlas = SubResource("CompressedTexture2D_qdwsq")
+region = Rect2(19, 5, 10, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kta18"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwxa1"]
+atlas = SubResource("CompressedTexture2D_kta18")
+region = Rect2(19, 5, 10, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_62fam"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkacx"]
+atlas = SubResource("CompressedTexture2D_62fam")
+region = Rect2(19, 5, 10, 8)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gfq5u"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e244l"]
+atlas = SubResource("CompressedTexture2D_gfq5u")
+region = Rect2(3, 6, 9, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_umlgh"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkic4"]
+atlas = SubResource("CompressedTexture2D_umlgh")
+region = Rect2(3, 6, 9, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wxhd0"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fn4o"]
+atlas = SubResource("CompressedTexture2D_wxhd0")
+region = Rect2(1, 17, 30, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6qxul"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jppp0"]
+atlas = SubResource("CompressedTexture2D_6qxul")
+region = Rect2(1, 17, 30, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5il25"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd3p5"]
+atlas = SubResource("CompressedTexture2D_5il25")
+region = Rect2(1, 17, 30, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uag37"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1ffn"]
+atlas = SubResource("CompressedTexture2D_uag37")
+region = Rect2(100, 27, 25, 20)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xd6xt"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eific"]
+atlas = SubResource("CompressedTexture2D_xd6xt")
+region = Rect2(100, 27, 25, 20)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y53g2"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mabl5"]
+atlas = SubResource("CompressedTexture2D_y53g2")
+region = Rect2(100, 27, 25, 20)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ytmfp"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdp2p"]
+atlas = SubResource("CompressedTexture2D_ytmfp")
+region = Rect2(64, 19, 32, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jcexu"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uid7p"]
+atlas = SubResource("CompressedTexture2D_jcexu")
+region = Rect2(64, 19, 32, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ugjm"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73y31"]
+atlas = SubResource("CompressedTexture2D_5ugjm")
+region = Rect2(64, 19, 32, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y3gav"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7rpe"]
+atlas = SubResource("CompressedTexture2D_y3gav")
+region = Rect2(128, 13, 64, 35)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lo4gy"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c7p0"]
+atlas = SubResource("CompressedTexture2D_lo4gy")
+region = Rect2(19, 23, 9, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kw8bl"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v2jj"]
+atlas = SubResource("CompressedTexture2D_kw8bl")
+region = Rect2(19, 23, 9, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fjrr6"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlcrh"]
+atlas = SubResource("CompressedTexture2D_fjrr6")
+region = Rect2(19, 23, 9, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2rcty"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tiem"]
+atlas = SubResource("CompressedTexture2D_2rcty")
+region = Rect2(19, 23, 9, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fiyqw"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxocu"]
+atlas = SubResource("CompressedTexture2D_fiyqw")
+region = Rect2(144, 1, 29, 15)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rqi4v"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hklhj"]
+atlas = SubResource("CompressedTexture2D_rqi4v")
+region = Rect2(144, 1, 29, 15)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2trp7"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpaaa"]
+atlas = SubResource("CompressedTexture2D_2trp7")
+region = Rect2(176, 0, 16, 15)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h7xym"]
+load_path = "res://.godot/imported/water_objects_spritesheet.png-cd050e8f90478547f5e7d95b2bf23eab.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ah10"]
+atlas = SubResource("CompressedTexture2D_h7xym")
+region = Rect2(113, 0, 7, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bmnp6"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsbdg"]
+atlas = SubResource("CompressedTexture2D_bmnp6")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4wo48"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge6yy"]
+atlas = SubResource("CompressedTexture2D_4wo48")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7lw5g"]
+load_path = "res://.godot/imported/mushrooms_flowers_stones_spritesheet.png-900f1067ccaaa2cbb70eeb92a7e6f033.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnu2a"]
+atlas = SubResource("CompressedTexture2D_7lw5g")
+region = Rect2(16, 32, 16, 16)
+
+[node name="MainMenuBackground" type="Node2D"]
+
+[node name="TileMap" type="Node2D" parent="."]
+
+[node name="Water" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAD//wQAAAAAAAAAAAD//wUAAAAAAAAAAAD//wYAAAAAAAAAAAD//wcAAAAAAAAAAAD//wgAAAAAAAAAAAD//wkAAAAAAAAAAAD//woAAAAAAAAAAAD//wsAAAAAAAAAAAD//wwAAAAAAAAAAAD//w0AAAAAAAAAAAD//w4AAAAAAAAAAAD//w8AAAAAAAAAAAD//xAAAAAAAAAAAAD//xEAAAAAAAAAAAD//xIAAAAAAAAAAAD//xMAAAAAAAAAAAD//xQAAAAAAAAAAAD//xUAAAAAAAAAAAD//xYAAAAAAAAAAAD//xcAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA8AAAAAAAAAAAAAABAAAAAAAAAAAAAAABEAAAAAAAAAAAAAABIAAAAAAAAAAAAAABMAAAAAAAAAAAAAABQAAAAAAAAAAAAAABUAAAAAAAAAAAAAABYAAAAAAAAAAAAAABcAAAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAABAAgAAAAAAAAAAAABAAkAAAAAAAAAAAABAAoAAAAAAAAAAAABAAsAAAAAAAAAAAABAAwAAAAAAAAAAAABAA0AAAAAAAAAAAABAA4AAAAAAAAAAAABAA8AAAAAAAAAAAABABAAAAAAAAAAAAABABEAAAAAAAAAAAABABIAAAAAAAAAAAABABMAAAAAAAAAAAABABQAAAAAAAAAAAABABUAAAAAAAAAAAABABYAAAAAAAAAAAABABcAAAAAAAAAAAACAP//AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAkAAAAAAAAAAAACAAoAAAAAAAAAAAACAAsAAAAAAAAAAAACAAwAAAAAAAAAAAACAA0AAAAAAAAAAAACAA4AAAAAAAAAAAACAA8AAAAAAAAAAAACABAAAAAAAAAAAAACABEAAAAAAAAAAAACABIAAAAAAAAAAAACABMAAAAAAAAAAAACABQAAAAAAAAAAAACABUAAAAAAAAAAAACABYAAAAAAAAAAAACABcAAAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAADAAkAAAAAAAAAAAADAAoAAAAAAAAAAAADAAsAAAAAAAAAAAADAAwAAAAAAAAAAAADAA0AAAAAAAAAAAADAA4AAAAAAAAAAAADAA8AAAAAAAAAAAADABAAAAAAAAAAAAADABEAAAAAAAAAAAADABIAAAAAAAAAAAADABMAAAAAAAAAAAADABQAAAAAAAAAAAADABUAAAAAAAAAAAADABYAAAAAAAAAAAADABcAAAAAAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAAEAAoAAAAAAAAAAAAEAAsAAAAAAAAAAAAEAAwAAAAAAAAAAAAEAA0AAAAAAAAAAAAEAA4AAAAAAAAAAAAEAA8AAAAAAAAAAAAEABAAAAAAAAAAAAAEABEAAAAAAAAAAAAEABIAAAAAAAAAAAAEABMAAAAAAAAAAAAEABQAAAAAAAAAAAAEABUAAAAAAAAAAAAEABYAAAAAAAAAAAAEABcAAAAAAAAAAAAFAP//AAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAYAAAAAAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAFAAkAAAAAAAAAAAAFAAoAAAAAAAAAAAAFAAsAAAAAAAAAAAAFAAwAAAAAAAAAAAAFAA0AAAAAAAAAAAAFAA4AAAAAAAAAAAAFAA8AAAAAAAAAAAAFABAAAAAAAAAAAAAFABEAAAAAAAAAAAAFABIAAAAAAAAAAAAFABMAAAAAAAAAAAAFABQAAAAAAAAAAAAFABUAAAAAAAAAAAAFABYAAAAAAAAAAAAFABcAAAAAAAAAAAAGAP//AAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAAAAAAAAAGAAkAAAAAAAAAAAAGAAoAAAAAAAAAAAAGAAsAAAAAAAAAAAAGAAwAAAAAAAAAAAAGAA0AAAAAAAAAAAAGAA4AAAAAAAAAAAAGAA8AAAAAAAAAAAAGABAAAAAAAAAAAAAGABEAAAAAAAAAAAAGABIAAAAAAAAAAAAGABMAAAAAAAAAAAAGABQAAAAAAAAAAAAGABUAAAAAAAAAAAAGABYAAAAAAAAAAAAGABcAAAAAAAAAAAAHAP//AAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAAAAAAAAAHAAkAAAAAAAAAAAAHAAoAAAAAAAAAAAAHAAsAAAAAAAAAAAAHAAwAAAAAAAAAAAAHAA0AAAAAAAAAAAAHAA4AAAAAAAAAAAAHAA8AAAAAAAAAAAAHABAAAAAAAAAAAAAHABEAAAAAAAAAAAAHABIAAAAAAAAAAAAHABMAAAAAAAAAAAAHABQAAAAAAAAAAAAHABUAAAAAAAAAAAAHABYAAAAAAAAAAAAHABcAAAAAAAAAAAAIAP//AAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAIAAoAAAAAAAAAAAAIAAsAAAAAAAAAAAAIAAwAAAAAAAAAAAAIAA0AAAAAAAAAAAAIAA4AAAAAAAAAAAAIAA8AAAAAAAAAAAAIABAAAAAAAAAAAAAIABEAAAAAAAAAAAAIABIAAAAAAAAAAAAIABMAAAAAAAAAAAAIABQAAAAAAAAAAAAIABUAAAAAAAAAAAAIABYAAAAAAAAAAAAIABcAAAAAAAAAAAAJAP//AAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAJAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAJAA8AAAAAAAAAAAAJABAAAAAAAAAAAAAJABEAAAAAAAAAAAAJABIAAAAAAAAAAAAJABMAAAAAAAAAAAAJABQAAAAAAAAAAAAJABUAAAAAAAAAAAAJABYAAAAAAAAAAAAJABcAAAAAAAAAAAAKAP//AAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAsAAAAAAAAAAAAKAAwAAAAAAAAAAAAKAA0AAAAAAAAAAAAKAA4AAAAAAAAAAAAKAA8AAAAAAAAAAAAKABAAAAAAAAAAAAAKABEAAAAAAAAAAAAKABIAAAAAAAAAAAAKABMAAAAAAAAAAAAKABQAAAAAAAAAAAAKABUAAAAAAAAAAAAKABYAAAAAAAAAAAAKABcAAAAAAAAAAAALAP//AAAAAAAAAAALAAAAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAALAAoAAAAAAAAAAAALAAsAAAAAAAAAAAALAAwAAAAAAAAAAAALAA0AAAAAAAAAAAALAA4AAAAAAAAAAAALAA8AAAAAAAAAAAALABAAAAAAAAAAAAALABEAAAAAAAAAAAALABIAAAAAAAAAAAALABMAAAAAAAAAAAALABQAAAAAAAAAAAALABUAAAAAAAAAAAALABYAAAAAAAAAAAALABcAAAAAAAAAAAAMAP//AAAAAAAAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAAwAAAAAAAAAAAAMAA0AAAAAAAAAAAAMAA4AAAAAAAAAAAAMAA8AAAAAAAAAAAAMABAAAAAAAAAAAAAMABEAAAAAAAAAAAAMABIAAAAAAAAAAAAMABMAAAAAAAAAAAAMABQAAAAAAAAAAAAMABUAAAAAAAAAAAAMABYAAAAAAAAAAAAMABcAAAAAAAAAAAANAP//AAAAAAAAAAANAAAAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAAAAAAAAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAANAAgAAAAAAAAAAAANAAkAAAAAAAAAAAANAAoAAAAAAAAAAAANAAsAAAAAAAAAAAANAAwAAAAAAAAAAAANAA0AAAAAAAAAAAANAA4AAAAAAAAAAAANAA8AAAAAAAAAAAANABAAAAAAAAAAAAANABEAAAAAAAAAAAANABIAAAAAAAAAAAANABMAAAAAAAAAAAANABQAAAAAAAAAAAANABUAAAAAAAAAAAANABYAAAAAAAAAAAANABcAAAAAAAAAAAAOAP//AAAAAAAAAAAOAAAAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAOAAgAAAAAAAAAAAAOAAkAAAAAAAAAAAAOAAoAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAAAAAAOAA4AAAAAAAAAAAAOAA8AAAAAAAAAAAAOABAAAAAAAAAAAAAOABEAAAAAAAAAAAAOABIAAAAAAAAAAAAOABMAAAAAAAAAAAAOABQAAAAAAAAAAAAOABUAAAAAAAAAAAAOABYAAAAAAAAAAAAOABcAAAAAAAAAAAAPAP//AAAAAAAAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAAAAAAAAAAAPAAUAAAAAAAAAAAAPAAYAAAAAAAAAAAAPAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA0AAAAAAAAAAAAPAA4AAAAAAAAAAAAPAA8AAAAAAAAAAAAPABAAAAAAAAAAAAAPABEAAAAAAAAAAAAPABIAAAAAAAAAAAAPABMAAAAAAAAAAAAPABQAAAAAAAAAAAAPABUAAAAAAAAAAAAPABYAAAAAAAAAAAAPABcAAAAAAAAAAAAQAP//AAAAAAAAAAAQAAAAAAAAAAAAAAAQAAEAAAAAAAAAAAAQAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAAAAAAAAAQAAgAAAAAAAAAAAAQAAkAAAAAAAAAAAAQAAoAAAAAAAAAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAAAAAAAAAAQAA4AAAAAAAAAAAAQAA8AAAAAAAAAAAAQABAAAAAAAAAAAAAQABEAAAAAAAAAAAAQABIAAAAAAAAAAAAQABMAAAAAAAAAAAAQABQAAAAAAAAAAAAQABUAAAAAAAAAAAAQABYAAAAAAAAAAAAQABcAAAAAAAAAAAARAP//AAAAAAAAAAARAAAAAAAAAAAAAAARAAEAAAAAAAAAAAARAAIAAAAAAAAAAAARAAMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAARAAkAAAAAAAAAAAARAAoAAAAAAAAAAAARAAsAAAAAAAAAAAARAAwAAAAAAAAAAAARAA0AAAAAAAAAAAARAA4AAAAAAAAAAAARAA8AAAAAAAAAAAARABAAAAAAAAAAAAARABEAAAAAAAAAAAARABIAAAAAAAAAAAARABMAAAAAAAAAAAARABQAAAAAAAAAAAARABUAAAAAAAAAAAARABYAAAAAAAAAAAARABcAAAAAAAAAAAASAP//AAAAAAAAAAASAAAAAAAAAAAAAAASAAEAAAAAAAAAAAASAAIAAAAAAAAAAAASAAMAAAAAAAAAAAASAAQAAAAAAAAAAAASAAUAAAAAAAAAAAASAAYAAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAAAAAAAAASAAkAAAAAAAAAAAASAAoAAAAAAAAAAAASAAsAAAAAAAAAAAASAAwAAAAAAAAAAAASAA0AAAAAAAAAAAASAA4AAAAAAAAAAAASAA8AAAAAAAAAAAASABAAAAAAAAAAAAASABEAAAAAAAAAAAASABIAAAAAAAAAAAASABMAAAAAAAAAAAASABQAAAAAAAAAAAASABUAAAAAAAAAAAASABYAAAAAAAAAAAASABcAAAAAAAAAAAATAP//AAAAAAAAAAATAAAAAAAAAAAAAAATAAEAAAAAAAAAAAATAAIAAAAAAAAAAAATAAMAAAAAAAAAAAATAAQAAAAAAAAAAAATAAUAAAAAAAAAAAATAAYAAAAAAAAAAAATAAcAAAAAAAAAAAATAAgAAAAAAAAAAAATAAkAAAAAAAAAAAATAAoAAAAAAAAAAAATAAsAAAAAAAAAAAATAAwAAAAAAAAAAAATAA0AAAAAAAAAAAATAA4AAAAAAAAAAAATAA8AAAAAAAAAAAATABAAAAAAAAAAAAATABEAAAAAAAAAAAATABIAAAAAAAAAAAATABMAAAAAAAAAAAATABQAAAAAAAAAAAATABUAAAAAAAAAAAATABYAAAAAAAAAAAATABcAAAAAAAAAAAAUAP//AAAAAAAAAAAUAAAAAAAAAAAAAAAUAAEAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAMAAAAAAAAAAAAUAAQAAAAAAAAAAAAUAAUAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAcAAAAAAAAAAAAUAAgAAAAAAAAAAAAUAAkAAAAAAAAAAAAUAAoAAAAAAAAAAAAUAAsAAAAAAAAAAAAUAAwAAAAAAAAAAAAUAA0AAAAAAAAAAAAUAA4AAAAAAAAAAAAUAA8AAAAAAAAAAAAUABAAAAAAAAAAAAAUABEAAAAAAAAAAAAUABIAAAAAAAAAAAAUABMAAAAAAAAAAAAUABQAAAAAAAAAAAAUABUAAAAAAAAAAAAUABYAAAAAAAAAAAAUABcAAAAAAAAAAAAVAP//AAAAAAAAAAAVAAAAAAAAAAAAAAAVAAEAAAAAAAAAAAAVAAIAAAAAAAAAAAAVAAMAAAAAAAAAAAAVAAQAAAAAAAAAAAAVAAUAAAAAAAAAAAAVAAYAAAAAAAAAAAAVAAcAAAAAAAAAAAAVAAgAAAAAAAAAAAAVAAkAAAAAAAAAAAAVAAoAAAAAAAAAAAAVAAsAAAAAAAAAAAAVAAwAAAAAAAAAAAAVAA0AAAAAAAAAAAAVAA4AAAAAAAAAAAAVAA8AAAAAAAAAAAAVABAAAAAAAAAAAAAVABEAAAAAAAAAAAAVABIAAAAAAAAAAAAVABMAAAAAAAAAAAAVABQAAAAAAAAAAAAVABUAAAAAAAAAAAAVABYAAAAAAAAAAAAVABcAAAAAAAAAAAAWAP//AAAAAAAAAAAWAAAAAAAAAAAAAAAWAAEAAAAAAAAAAAAWAAIAAAAAAAAAAAAWAAMAAAAAAAAAAAAWAAQAAAAAAAAAAAAWAAUAAAAAAAAAAAAWAAYAAAAAAAAAAAAWAAcAAAAAAAAAAAAWAAgAAAAAAAAAAAAWAAkAAAAAAAAAAAAWAAoAAAAAAAAAAAAWAAsAAAAAAAAAAAAWAAwAAAAAAAAAAAAWAA0AAAAAAAAAAAAWAA4AAAAAAAAAAAAWAA8AAAAAAAAAAAAWABAAAAAAAAAAAAAWABEAAAAAAAAAAAAWABIAAAAAAAAAAAAWABMAAAAAAAAAAAAWABQAAAAAAAAAAAAWABUAAAAAAAAAAAAWABYAAAAAAAAAAAAWABcAAAAAAAAAAAAXAP//AAAAAAAAAAAXAAAAAAAAAAAAAAAXAAEAAAAAAAAAAAAXAAIAAAAAAAAAAAAXAAMAAAAAAAAAAAAXAAQAAAAAAAAAAAAXAAUAAAAAAAAAAAAXAAYAAAAAAAAAAAAXAAcAAAAAAAAAAAAXAAgAAAAAAAAAAAAXAAkAAAAAAAAAAAAXAAoAAAAAAAAAAAAXAAsAAAAAAAAAAAAXAAwAAAAAAAAAAAAXAA0AAAAAAAAAAAAXAA4AAAAAAAAAAAAXAA8AAAAAAAAAAAAXABAAAAAAAAAAAAAXABEAAAAAAAAAAAAXABIAAAAAAAAAAAAXABMAAAAAAAAAAAAXABQAAAAAAAAAAAAXABUAAAAAAAAAAAAXABYAAAAAAAAAAAAXABcAAAAAAAAAAAAYAP//AAAAAAAAAAAYAAAAAAAAAAAAAAAYAAEAAAAAAAAAAAAYAAIAAAAAAAAAAAAYAAMAAAAAAAAAAAAYAAQAAAAAAAAAAAAYAAUAAAAAAAAAAAAYAAYAAAAAAAAAAAAYAAcAAAAAAAAAAAAYAAgAAAAAAAAAAAAYAAkAAAAAAAAAAAAYAAoAAAAAAAAAAAAYAAsAAAAAAAAAAAAYAAwAAAAAAAAAAAAYAA0AAAAAAAAAAAAYAA4AAAAAAAAAAAAYAA8AAAAAAAAAAAAYABAAAAAAAAAAAAAYABEAAAAAAAAAAAAYABIAAAAAAAAAAAAYABMAAAAAAAAAAAAYABQAAAAAAAAAAAAYABUAAAAAAAAAAAAYABYAAAAAAAAAAAAYABcAAAAAAAAAAAAZAP//AAAAAAAAAAAZAAAAAAAAAAAAAAAZAAEAAAAAAAAAAAAZAAIAAAAAAAAAAAAZAAMAAAAAAAAAAAAZAAQAAAAAAAAAAAAZAAUAAAAAAAAAAAAZAAYAAAAAAAAAAAAZAAcAAAAAAAAAAAAZAAgAAAAAAAAAAAAZAAkAAAAAAAAAAAAZAAoAAAAAAAAAAAAZAAsAAAAAAAAAAAAZAAwAAAAAAAAAAAAZAA0AAAAAAAAAAAAZAA4AAAAAAAAAAAAZAA8AAAAAAAAAAAAZABAAAAAAAAAAAAAZABEAAAAAAAAAAAAZABIAAAAAAAAAAAAZABMAAAAAAAAAAAAZABQAAAAAAAAAAAAZABUAAAAAAAAAAAAZABYAAAAAAAAAAAAZABcAAAAAAAAAAAAaAP//AAAAAAAAAAAaAAAAAAAAAAAAAAAaAAEAAAAAAAAAAAAaAAIAAAAAAAAAAAAaAAMAAAAAAAAAAAAaAAQAAAAAAAAAAAAaAAUAAAAAAAAAAAAaAAYAAAAAAAAAAAAaAAcAAAAAAAAAAAAaAAgAAAAAAAAAAAAaAAkAAAAAAAAAAAAaAAoAAAAAAAAAAAAaAAsAAAAAAAAAAAAaAAwAAAAAAAAAAAAaAA0AAAAAAAAAAAAaAA4AAAAAAAAAAAAaAA8AAAAAAAAAAAAaABAAAAAAAAAAAAAaABEAAAAAAAAAAAAaABIAAAAAAAAAAAAaABMAAAAAAAAAAAAaABQAAAAAAAAAAAAaABUAAAAAAAAAAAAaABYAAAAAAAAAAAAaABcAAAAAAAAAAAAbAP//AAAAAAAAAAAbAAAAAAAAAAAAAAAbAAEAAAAAAAAAAAAbAAIAAAAAAAAAAAAbAAMAAAAAAAAAAAAbAAQAAAAAAAAAAAAbAAUAAAAAAAAAAAAbAAYAAAAAAAAAAAAbAAcAAAAAAAAAAAAbAAgAAAAAAAAAAAAbAAkAAAAAAAAAAAAbAAoAAAAAAAAAAAAbAAsAAAAAAAAAAAAbAAwAAAAAAAAAAAAbAA0AAAAAAAAAAAAbAA4AAAAAAAAAAAAbAA8AAAAAAAAAAAAbABAAAAAAAAAAAAAbABEAAAAAAAAAAAAbABIAAAAAAAAAAAAbABMAAAAAAAAAAAAbABQAAAAAAAAAAAAbABUAAAAAAAAAAAAbABYAAAAAAAAAAAAbABcAAAAAAAAAAAAcAP//AAAAAAAAAAAcAAAAAAAAAAAAAAAcAAEAAAAAAAAAAAAcAAIAAAAAAAAAAAAcAAMAAAAAAAAAAAAcAAQAAAAAAAAAAAAcAAUAAAAAAAAAAAAcAAYAAAAAAAAAAAAcAAcAAAAAAAAAAAAcAAgAAAAAAAAAAAAcAAkAAAAAAAAAAAAcAAoAAAAAAAAAAAAcAAsAAAAAAAAAAAAcAAwAAAAAAAAAAAAcAA0AAAAAAAAAAAAcAA4AAAAAAAAAAAAcAA8AAAAAAAAAAAAcABAAAAAAAAAAAAAcABEAAAAAAAAAAAAcABIAAAAAAAAAAAAcABMAAAAAAAAAAAAcABQAAAAAAAAAAAAcABUAAAAAAAAAAAAcABYAAAAAAAAAAAAcABcAAAAAAAAAAAAdAP//AAAAAAAAAAAdAAAAAAAAAAAAAAAdAAEAAAAAAAAAAAAdAAIAAAAAAAAAAAAdAAMAAAAAAAAAAAAdAAQAAAAAAAAAAAAdAAUAAAAAAAAAAAAdAAYAAAAAAAAAAAAdAAcAAAAAAAAAAAAdAAgAAAAAAAAAAAAdAAkAAAAAAAAAAAAdAAoAAAAAAAAAAAAdAAsAAAAAAAAAAAAdAAwAAAAAAAAAAAAdAA0AAAAAAAAAAAAdAA4AAAAAAAAAAAAdAA8AAAAAAAAAAAAdABAAAAAAAAAAAAAdABEAAAAAAAAAAAAdABIAAAAAAAAAAAAdABMAAAAAAAAAAAAdABQAAAAAAAAAAAAdABUAAAAAAAAAAAAdABYAAAAAAAAAAAAdABcAAAAAAAAAAAAeAP//AAAAAAAAAAAeAAAAAAAAAAAAAAAeAAEAAAAAAAAAAAAeAAIAAAAAAAAAAAAeAAMAAAAAAAAAAAAeAAQAAAAAAAAAAAAeAAUAAAAAAAAAAAAeAAYAAAAAAAAAAAAeAAcAAAAAAAAAAAAeAAgAAAAAAAAAAAAeAAkAAAAAAAAAAAAeAAoAAAAAAAAAAAAeAAsAAAAAAAAAAAAeAAwAAAAAAAAAAAAeAA0AAAAAAAAAAAAeAA4AAAAAAAAAAAAeAA8AAAAAAAAAAAAeABAAAAAAAAAAAAAeABEAAAAAAAAAAAAeABIAAAAAAAAAAAAeABMAAAAAAAAAAAAeABQAAAAAAAAAAAAeABUAAAAAAAAAAAAeABYAAAAAAAAAAAAeABcAAAAAAAAAAAAfAP//AAAAAAAAAAAfAAAAAAAAAAAAAAAfAAEAAAAAAAAAAAAfAAIAAAAAAAAAAAAfAAMAAAAAAAAAAAAfAAQAAAAAAAAAAAAfAAUAAAAAAAAAAAAfAAYAAAAAAAAAAAAfAAcAAAAAAAAAAAAfAAgAAAAAAAAAAAAfAAkAAAAAAAAAAAAfAAoAAAAAAAAAAAAfAAsAAAAAAAAAAAAfAAwAAAAAAAAAAAAfAA0AAAAAAAAAAAAfAA4AAAAAAAAAAAAfAA8AAAAAAAAAAAAfABAAAAAAAAAAAAAfABEAAAAAAAAAAAAfABIAAAAAAAAAAAAfABMAAAAAAAAAAAAfABQAAAAAAAAAAAAfABUAAAAAAAAAAAAfABYAAAAAAAAAAAAfABcAAAAAAAAAAAAgAP//AAAAAAAAAAAgAAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAgAAIAAAAAAAAAAAAgAAMAAAAAAAAAAAAgAAQAAAAAAAAAAAAgAAUAAAAAAAAAAAAgAAYAAAAAAAAAAAAgAAcAAAAAAAAAAAAgAAgAAAAAAAAAAAAgAAkAAAAAAAAAAAAgAAoAAAAAAAAAAAAgAAsAAAAAAAAAAAAgAAwAAAAAAAAAAAAgAA0AAAAAAAAAAAAgAA4AAAAAAAAAAAAgAA8AAAAAAAAAAAAgABAAAAAAAAAAAAAgABEAAAAAAAAAAAAgABIAAAAAAAAAAAAgABMAAAAAAAAAAAAgABQAAAAAAAAAAAAgABUAAAAAAAAAAAAgABYAAAAAAAAAAAAgABcAAAAAAAAAAAAhAP//AAAAAAAAAAAhAAAAAAAAAAAAAAAhAAEAAAAAAAAAAAAhAAIAAAAAAAAAAAAhAAMAAAAAAAAAAAAhAAQAAAAAAAAAAAAhAAUAAAAAAAAAAAAhAAYAAAAAAAAAAAAhAAcAAAAAAAAAAAAhAAgAAAAAAAAAAAAhAAkAAAAAAAAAAAAhAAoAAAAAAAAAAAAhAAsAAAAAAAAAAAAhAAwAAAAAAAAAAAAhAA0AAAAAAAAAAAAhAA4AAAAAAAAAAAAhAA8AAAAAAAAAAAAhABAAAAAAAAAAAAAhABEAAAAAAAAAAAAhABIAAAAAAAAAAAAhABMAAAAAAAAAAAAhABQAAAAAAAAAAAAhABUAAAAAAAAAAAAhABYAAAAAAAAAAAAhABcAAAAAAAAAAAAiAP//AAAAAAAAAAAiAAAAAAAAAAAAAAAiAAEAAAAAAAAAAAAiAAIAAAAAAAAAAAAiAAMAAAAAAAAAAAAiAAQAAAAAAAAAAAAiAAUAAAAAAAAAAAAiAAYAAAAAAAAAAAAiAAcAAAAAAAAAAAAiAAgAAAAAAAAAAAAiAAkAAAAAAAAAAAAiAAoAAAAAAAAAAAAiAAsAAAAAAAAAAAAiAAwAAAAAAAAAAAAiAA0AAAAAAAAAAAAiAA4AAAAAAAAAAAAiAA8AAAAAAAAAAAAiABAAAAAAAAAAAAAiABEAAAAAAAAAAAAiABIAAAAAAAAAAAAiABMAAAAAAAAAAAAiABQAAAAAAAAAAAAiABUAAAAAAAAAAAAiABYAAAAAAAAAAAAiABcAAAAAAAAAAAAjAP//AAAAAAAAAAAjAAAAAAAAAAAAAAAjAAEAAAAAAAAAAAAjAAIAAAAAAAAAAAAjAAMAAAAAAAAAAAAjAAQAAAAAAAAAAAAjAAUAAAAAAAAAAAAjAAYAAAAAAAAAAAAjAAcAAAAAAAAAAAAjAAgAAAAAAAAAAAAjAAkAAAAAAAAAAAAjAAoAAAAAAAAAAAAjAAsAAAAAAAAAAAAjAAwAAAAAAAAAAAAjAA0AAAAAAAAAAAAjAA4AAAAAAAAAAAAjAA8AAAAAAAAAAAAjABAAAAAAAAAAAAAjABEAAAAAAAAAAAAjABIAAAAAAAAAAAAjABMAAAAAAAAAAAAjABQAAAAAAAAAAAAjABUAAAAAAAAAAAAjABYAAAAAAAAAAAAjABcAAAAAAAAAAAAkAP//AAAAAAAAAAAkAAAAAAAAAAAAAAAkAAEAAAAAAAAAAAAkAAIAAAAAAAAAAAAkAAMAAAAAAAAAAAAkAAQAAAAAAAAAAAAkAAUAAAAAAAAAAAAkAAYAAAAAAAAAAAAkAAcAAAAAAAAAAAAkAAgAAAAAAAAAAAAkAAkAAAAAAAAAAAAkAAoAAAAAAAAAAAAkAAsAAAAAAAAAAAAkAAwAAAAAAAAAAAAkAA0AAAAAAAAAAAAkAA4AAAAAAAAAAAAkAA8AAAAAAAAAAAAkABAAAAAAAAAAAAAkABEAAAAAAAAAAAAkABIAAAAAAAAAAAAkABMAAAAAAAAAAAAkABQAAAAAAAAAAAAkABUAAAAAAAAAAAAkABYAAAAAAAAAAAAkABcAAAAAAAAAAAAlAP//AAAAAAAAAAAlAAAAAAAAAAAAAAAlAAEAAAAAAAAAAAAlAAIAAAAAAAAAAAAlAAMAAAAAAAAAAAAlAAQAAAAAAAAAAAAlAAUAAAAAAAAAAAAlAAYAAAAAAAAAAAAlAAcAAAAAAAAAAAAlAAgAAAAAAAAAAAAlAAkAAAAAAAAAAAAlAAoAAAAAAAAAAAAlAAsAAAAAAAAAAAAlAAwAAAAAAAAAAAAlAA0AAAAAAAAAAAAlAA4AAAAAAAAAAAAlAA8AAAAAAAAAAAAlABAAAAAAAAAAAAAlABEAAAAAAAAAAAAlABIAAAAAAAAAAAAlABMAAAAAAAAAAAAlABQAAAAAAAAAAAAlABUAAAAAAAAAAAAlABYAAAAAAAAAAAAlABcAAAAAAAAAAAAmAP//AAAAAAAAAAAmAAAAAAAAAAAAAAAmAAEAAAAAAAAAAAAmAAIAAAAAAAAAAAAmAAMAAAAAAAAAAAAmAAQAAAAAAAAAAAAmAAUAAAAAAAAAAAAmAAYAAAAAAAAAAAAmAAcAAAAAAAAAAAAmAAgAAAAAAAAAAAAmAAkAAAAAAAAAAAAmAAoAAAAAAAAAAAAmAAsAAAAAAAAAAAAmAAwAAAAAAAAAAAAmAA0AAAAAAAAAAAAmAA4AAAAAAAAAAAAmAA8AAAAAAAAAAAAmABAAAAAAAAAAAAAmABEAAAAAAAAAAAAmABIAAAAAAAAAAAAmABMAAAAAAAAAAAAmABQAAAAAAAAAAAAmABUAAAAAAAAAAAAmABYAAAAAAAAAAAAmABcAAAAAAAAAAAAnAP//AAAAAAAAAAAnAAAAAAAAAAAAAAAnAAEAAAAAAAAAAAAnAAIAAAAAAAAAAAAnAAMAAAAAAAAAAAAnAAQAAAAAAAAAAAAnAAUAAAAAAAAAAAAnAAYAAAAAAAAAAAAnAAcAAAAAAAAAAAAnAAgAAAAAAAAAAAAnAAkAAAAAAAAAAAAnAAoAAAAAAAAAAAAnAAsAAAAAAAAAAAAnAAwAAAAAAAAAAAAnAA0AAAAAAAAAAAAnAA4AAAAAAAAAAAAnAA8AAAAAAAAAAAAnABAAAAAAAAAAAAAnABEAAAAAAAAAAAAnABIAAAAAAAAAAAAnABMAAAAAAAAAAAAnABQAAAAAAAAAAAAnABUAAAAAAAAAAAAnABYAAAAAAAAAAAAnABcAAAAAAAAAAAAoAP//AAAAAAAAAAAoAAAAAAAAAAAAAAAoAAEAAAAAAAAAAAAoAAIAAAAAAAAAAAAoAAMAAAAAAAAAAAAoAAQAAAAAAAAAAAAoAAUAAAAAAAAAAAAoAAYAAAAAAAAAAAAoAAcAAAAAAAAAAAAoAAgAAAAAAAAAAAAoAAkAAAAAAAAAAAAoAAoAAAAAAAAAAAAoAAsAAAAAAAAAAAAoAAwAAAAAAAAAAAAoAA0AAAAAAAAAAAAoAA4AAAAAAAAAAAAoAA8AAAAAAAAAAAAoABAAAAAAAAAAAAAoABEAAAAAAAAAAAAoABIAAAAAAAAAAAAoABMAAAAAAAAAAAAoABQAAAAAAAAAAAAoABUAAAAAAAAAAAAoABYAAAAAAAAAAAAoABcAAAAAAAAAAAA=")
+tile_set = ExtResource("1_pg4je")
+
+[node name="Ground" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAAHAAgAAQABAAEAAAAHAAkAAQABAAEAAAAHAAoAAQABAAEAAAAHAAsAAQABAAEAAAAHAAwAAQABAAEAAAAIAAwAAQABAAEAAAAIAAsAAQABAAEAAAAIAAoAAQABAAEAAAAIAAkAAQABAAEAAAAIAAgAAQABAAEAAAAJAAgAAQABAAEAAAAJAAkAAQABAAEAAAAJAAoAAQABAAEAAAAJAAsAAQABAAEAAAAJAAwAAQABAAEAAAAKAAwAAQABAAEAAAALAAwAAQABAAEAAAALAAsAAQABAAEAAAALAAoAAQABAAEAAAALAAkAAQABAAEAAAALAAgAAQABAAEAAAAKAAgAAQABAAEAAAAKAAkAAQABAAEAAAAKAAoAAQABAAEAAAAKAAsAAQABAAEAAAAGAAsAAQABAAEAAAAFAAsAAQABAAEAAAAFAAoAAQABAAEAAAAGAAoAAQABAAEAAAAMAAsAAQAFAAEAAAANAAsAAQACAAIAAAANAAoAAQACAAEAAAANAAkAAQAFAAEAAAAOAAkAAQABAAIAAAAPAAkAAQABAAIAAAAPAAgAAQABAAEAAAAPAAcAAQABAAEAAAAOAAcAAQABAAEAAAAOAAgAAQABAAEAAAANAAgAAQABAAEAAAAMAAgAAQABAAEAAAAMAAkAAQABAAEAAAAMAAoAAQABAAEAAAAGAAkAAQABAAEAAAAGAAgAAQABAAEAAAAGAAcAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAFAAkAAQABAAEAAAAMAAcAAQABAAEAAAAMAAYAAQABAAEAAAAMAAUAAQABAAEAAAAMAAQAAQAFAAIAAAANAAQAAQABAAAAAAAOAAQAAQABAAAAAAAPAAQAAQABAAAAAAAQAAQAAQABAAAAAAARAAQAAQABAAAAAAASAAQAAQABAAAAAAATAAQAAQABAAAAAAAUAAQAAQABAAAAAAAVAAQAAQABAAAAAAAWAAQAAQABAAAAAAAXAAQAAQABAAAAAAAYAAQAAQABAAAAAAAZAAQAAQABAAAAAAAaAAQAAQABAAAAAAAbAAQAAQABAAAAAAAcAAQAAQACAAAAAAAcAAUAAQAFAAIAAAAcAAYAAQABAAEAAAAdAAYAAQABAAEAAAAeAAYAAQABAAEAAAAfAAYAAQACAAEAAAAfAAUAAQACAAAAAAAeAAUAAQABAAAAAAAdAAUAAQABAAAAAAAeAAcAAQABAAEAAAAfAAcAAQABAAEAAAAgAAcAAQABAAAAAAAhAAcAAQACAAAAAAAgAAgAAQABAAEAAAAhAAgAAQAFAAIAAAAiAAgAAQABAAAAAAAjAAgAAQACAAAAAAAjAAkAAQACAAEAAAAjAAoAAQACAAEAAAAjAAsAAQACAAEAAAAjAAwAAQACAAEAAAAjAA0AAQACAAEAAAAdABQAAQAAAAIAAAAeABQAAQABAAIAAAAgABQAAQABAAIAAAAfABQAAQABAAIAAAAhABQAAQACAAIAAAAiABMAAQACAAIAAAAhABMAAQAFAAEAAAAhABIAAQABAAEAAAAiABIAAQACAAEAAAAQAAkAAQABAAIAAAARAAkAAQABAAIAAAASAAkAAQABAAIAAAATAAkAAQABAAIAAAAUAAkAAQABAAIAAAAVAAkAAQABAAIAAAAWAAkAAQABAAIAAAAXAAkAAQAGAAEAAAAXAAoAAQAAAAIAAAAYAAoAAQAGAAEAAAAYAAsAAQAAAAEAAAAYAAwAAQAAAAIAAAAZAAwAAQAGAAEAAAAZAA0AAQAAAAEAAAAZAA4AAQAGAAEAAAAZAA8AAQAAAAEAAAAaAA8AAQABAAEAAAAaABAAAQAGAAEAAAAaABEAAQAAAAIAAAAbABEAAQAGAAEAAAAbABIAAQAAAAIAAAAcABIAAQAGAAEAAAAcABMAAQAAAAIAAAAdABMAAQAGAAEAAAAdABIAAQABAAEAAAAdABEAAQABAAEAAAAcABEAAQABAAEAAAAcABAAAQABAAEAAAAbABAAAQABAAEAAAAdABAAAQABAAEAAAAbAA8AAQABAAEAAAAcAA8AAQABAAEAAAAdAA8AAQABAAEAAAAeAA8AAQABAAEAAAAfAA8AAQABAAEAAAAgAA8AAQABAAEAAAAhAA8AAQABAAEAAAAhAA4AAQABAAEAAAAiAA4AAQAFAAEAAAAjAA4AAQACAAIAAAAiAA8AAQACAAEAAAAiABAAAQACAAEAAAAiABEAAQACAAEAAAAhABEAAQABAAEAAAAhABAAAQABAAEAAAAgABAAAQABAAEAAAAfABAAAQABAAEAAAAeABAAAQABAAEAAAAeABEAAQABAAEAAAAeABIAAQABAAEAAAAeABMAAQABAAEAAAAfABMAAQABAAEAAAAgABMAAQABAAEAAAAgABIAAQABAAEAAAAfABIAAQABAAEAAAAfABEAAQABAAEAAAAgABEAAQABAAEAAAAGAAYAAQABAAEAAAAGAAUAAQABAAEAAAAGAAQAAQABAAEAAAAGAAMAAQABAAEAAAAGAAIAAQAGAAIAAAAGAAEAAQAAAAAAAAAHAAEAAQABAAAAAAAIAAEAAQABAAAAAAAJAAEAAQABAAAAAAAKAAEAAQABAAAAAAALAAEAAQABAAAAAAAMAAEAAQACAAAAAAAMAAIAAQACAAEAAAAMAAMAAQACAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAAKAAIAAQABAAEAAAAJAAIAAQABAAEAAAAIAAIAAQABAAEAAAAHAAIAAQABAAEAAAAHAAMAAQABAAEAAAAIAAMAAQABAAEAAAAJAAMAAQABAAEAAAAKAAMAAQABAAEAAAAHAAQAAQABAAEAAAAHAAYAAQABAAEAAAAHAAcAAQABAAEAAAAIAAcAAQABAAEAAAAIAAYAAQABAAEAAAAHAAUAAQABAAEAAAAIAAUAAQABAAEAAAAIAAQAAQABAAEAAAAJAAYAAQABAAEAAAAJAAUAAQABAAEAAAAKAAUAAQABAAEAAAAKAAQAAQABAAEAAAAKAAYAAQABAAEAAAAJAAQAAQABAAEAAAAJAAcAAQABAAEAAAAKAAcAAQABAAEAAAALAAUAAQABAAEAAAALAAYAAQABAAEAAAALAAcAAQABAAEAAAALAAQAAQABAAEAAAANAAUAAQABAAEAAAAOAAUAAQABAAEAAAAPAAUAAQABAAEAAAAQAAUAAQABAAEAAAARAAUAAQABAAEAAAASAAUAAQABAAEAAAATAAUAAQABAAEAAAANAAYAAQABAAEAAAANAAcAAQABAAEAAAAOAAYAAQABAAEAAAAPAAYAAQABAAEAAAAQAAYAAQABAAEAAAARAAYAAQABAAEAAAASAAYAAQABAAEAAAATAAYAAQABAAEAAAAUAAYAAQABAAEAAAAVAAYAAQABAAEAAAAVAAUAAQABAAEAAAAWAAUAAQABAAEAAAAQAAcAAQABAAEAAAAQAAgAAQABAAEAAAARAAgAAQABAAEAAAASAAgAAQABAAEAAAATAAgAAQABAAEAAAAUAAgAAQABAAEAAAAVAAgAAQABAAEAAAAWAAgAAQABAAEAAAAXAAgAAQABAAEAAAAYAAgAAQABAAEAAAAZAAgAAQABAAEAAAAYAAkAAQABAAEAAAAZAAoAAQABAAEAAAAZAAsAAQABAAEAAAAaAAwAAQABAAEAAAAaAA0AAQABAAEAAAAaAA4AAQABAAEAAAAbAA4AAQABAAEAAAAcAA4AAQABAAEAAAAdAA4AAQABAAEAAAAeAA4AAQABAAEAAAAfAA4AAQABAAEAAAAgAA4AAQABAAEAAAAhAA0AAQABAAEAAAAgAA0AAQABAAEAAAAfAA0AAQABAAEAAAAeAA0AAQABAAEAAAAdAA0AAQABAAEAAAAcAA0AAQABAAEAAAAbAA0AAQABAAEAAAAiAA0AAQABAAEAAAAiAAwAAQABAAEAAAAiAAsAAQABAAEAAAAiAAoAAQABAAEAAAAiAAkAAQABAAEAAAAgAAkAAQABAAEAAAAhAAkAAQABAAEAAAAhAAoAAQABAAEAAAAhAAsAAQABAAEAAAAhAAwAAQABAAEAAAAgAAwAAQABAAEAAAAgAAsAAQABAAEAAAAgAAoAAQABAAEAAAAfAAwAAQABAAEAAAAeAAwAAQABAAEAAAAeAAsAAQABAAEAAAAfAAoAAQABAAEAAAAfAAkAAQABAAEAAAAfAAgAAQABAAEAAAAdAAcAAQABAAEAAAAcAAcAAQABAAEAAAAbAAUAAQABAAEAAAAaAAUAAQABAAEAAAAZAAUAAQABAAEAAAAYAAUAAQABAAEAAAAXAAUAAQABAAEAAAAUAAUAAQABAAEAAAARAAcAAQABAAEAAAASAAcAAQABAAEAAAATAAcAAQABAAEAAAAUAAcAAQABAAEAAAAVAAcAAQABAAEAAAAWAAcAAQABAAEAAAAXAAcAAQABAAEAAAAYAAcAAQABAAEAAAAZAAcAAQABAAEAAAAaAAcAAQABAAEAAAAXAAYAAQABAAEAAAAWAAYAAQABAAEAAAAYAAYAAQABAAEAAAAZAAYAAQABAAEAAAAaAAYAAQABAAEAAAAbAAYAAQABAAEAAAAbAAcAAQABAAEAAAAaAAgAAQABAAEAAAAZAAkAAQABAAEAAAAaAAkAAQABAAEAAAAbAAkAAQABAAEAAAAbAAgAAQABAAEAAAAcAAgAAQABAAEAAAAdAAgAAQABAAEAAAAeAAgAAQABAAEAAAAeAAkAAQABAAEAAAAdAAkAAQABAAEAAAAdAAoAAQABAAEAAAAcAAoAAQABAAEAAAAbAAoAAQABAAEAAAAaAAoAAQABAAEAAAAaAAsAAQABAAEAAAAbAAsAAQABAAEAAAAcAAsAAQABAAEAAAAdAAsAAQABAAEAAAAcAAkAAQABAAEAAAAbAAwAAQABAAEAAAAcAAwAAQABAAEAAAAdAAwAAQABAAEAAAAfAAsAAQABAAEAAAAeAAoAAQABAAEAAAAHABMAAQAAAAIAAAAIABMAAQABAAIAAAAJABMAAQABAAIAAAAKABMAAQABAAIAAAALABMAAQABAAIAAAAMABMAAQACAAIAAAAMABIAAQACAAEAAAAMABEAAQACAAEAAAAMABAAAQACAAEAAAAMAA8AAQACAAEAAAAMAA4AAQAFAAEAAAAMAA0AAQACAAEAAAAMAAwAAQACAAEAAAAHAA0AAQABAAEAAAAHAA4AAQABAAEAAAAHAA8AAQABAAEAAAAHABAAAQABAAEAAAAHABEAAQAGAAEAAAAHABIAAQAAAAEAAAAIABIAAQABAAEAAAAIABEAAQABAAEAAAAIABAAAQABAAEAAAAIAA8AAQABAAEAAAAIAA4AAQABAAEAAAAIAA0AAQABAAEAAAAJAA0AAQABAAEAAAAKAA0AAQABAAEAAAAJAA4AAQABAAEAAAAJAA8AAQABAAEAAAAJABAAAQABAAEAAAAJABEAAQABAAEAAAAJABIAAQABAAEAAAAKABIAAQABAAEAAAAKABEAAQABAAEAAAALABEAAQABAAEAAAALABAAAQABAAEAAAALAA8AAQABAAEAAAAKAA8AAQABAAEAAAAKAA4AAQABAAEAAAALAA0AAQABAAEAAAAKABAAAQABAAEAAAALAA4AAQABAAEAAAALABIAAQABAAEAAAAFAAwAAQABAAEAAAAGAAwAAQABAAEAAAAGAA0AAQABAAEAAAAGAA4AAQABAAEAAAAFAA4AAQAGAAEAAAAFAA0AAQABAAEAAAAGAA8AAQABAAEAAAAGABAAAQAGAAEAAAAGABEAAQAAAAIAAAADAAcAAQAAAAAAAAADAAgAAQAAAAEAAAADAAkAAQAAAAEAAAADAAoAAQAAAAEAAAADAAsAAQAAAAEAAAADAAwAAQAAAAEAAAADAA0AAQAAAAEAAAADAA4AAQAAAAIAAAAEAA4AAQABAAIAAAAEAA0AAQABAAEAAAAEAAwAAQABAAEAAAAEAAsAAQABAAEAAAAEAAoAAQABAAEAAAAEAAkAAQABAAEAAAAEAAgAAQABAAEAAAAEAAcAAQAGAAIAAAAEAAYAAQAAAAEAAAAEAAUAAQAAAAAAAAAFAAUAAQAGAAIAAAAFAAQAAQAAAAEAAAAFAAMAAQAAAAEAAAAFAAIAAQAAAAAAAAAFAAYAAQABAAEAAAAFAA8AAQAAAAEAAAAFABAAAQAAAAIAAAAZABAAAQAAAAIAAAANAA4AAQABAAMAAAAOAA4AAQABAAMAAAAPAA4AAQABAAMAAAAQAA4AAQABAAMAAAARAA4AAQABAAMAAAASAA4AAQAGAAAAAAATAA4AAQAFAAAAAAAUAA4AAQABAAMAAAAVAA4AAQABAAMAAAAWAA4AAQABAAMAAAAXAA4AAQABAAMAAAAYAA4AAQAGAAMAAAATAA8AAQAHAAEAAAATABAAAQAEAAIAAAAUABAAAQABAAAAAAAUABEAAQABAAEAAAATABEAAQAAAAEAAAATABIAAQAAAAIAAAAUABIAAQABAAIAAAAVABIAAQACAAIAAAAVABEAAQACAAEAAAAVABAAAQACAAAAAAASAA8AAQAAAAIAAAA=")
+tile_set = ExtResource("1_pg4je")
+
+[node name="Rocks" type="TileMapLayer" parent="TileMap"]
+tile_set = ExtResource("1_pg4je")
+
+[node name="Tilled" type="TileMapLayer" parent="TileMap"]
+tile_map_data = PackedByteArray("AAAhABIABAACAAIAAAAhABEABAACAAEAAAAhABAABAACAAEAAAAhAA8ABAACAAEAAAAhAA4ABAACAAAAAAAgAA4ABAABAAAAAAAfAA4ABAAAAAAAAAAfAA8ABAAAAAEAAAAfABAABAAAAAEAAAAfABEABAAAAAEAAAAfABIABAAAAAIAAAAgABIABAABAAIAAAAgABEABAABAAEAAAAgABAABAABAAEAAAAgAA8ABAABAAEAAAAaAA0ABAAAAAIAAAAbAA0ABAABAAIAAAAcAA0ABAABAAIAAAAdAA0ABAACAAIAAAAdAAwABAACAAEAAAAdAAsABAACAAAAAAAcAAsABAABAAAAAAAbAAsABAABAAAAAAAaAAsABAAAAAAAAAAaAAwABAAAAAEAAAAbAAwABAABAAEAAAAcAAwABAABAAEAAAAiAAkABAACAAAAAAAhAAkABAABAAAAAAAgAAkABAAAAAAAAAAgAAoABAAAAAEAAAAgAAsABAAAAAEAAAAgAAwABAAAAAIAAAAhAAwABAABAAIAAAAiAAwABAACAAIAAAAiAAsABAACAAEAAAAiAAoABAACAAEAAAAhAAoABAABAAEAAAAhAAsABAABAAEAAAA=")
+tile_set = ExtResource("1_pg4je")
+
+[node name="Crops" type="Node2D" parent="."]
+
+[node name="Carrots" type="Node2D" parent="Crops"]
+
+[node name="Carrot" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(424, 184)
+texture = SubResource("AtlasTexture_aagh5")
+
+[node name="Carrot2" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(440, 184)
+texture = SubResource("AtlasTexture_n3rx0")
+
+[node name="Carrot3" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(456, 184)
+texture = SubResource("AtlasTexture_yp5h0")
+
+[node name="Carrot4" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(472, 184)
+texture = SubResource("AtlasTexture_wyt1i")
+
+[node name="Carrot5" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(424, 200)
+texture = SubResource("AtlasTexture_pg5ck")
+
+[node name="Carrot6" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(440, 200)
+texture = SubResource("AtlasTexture_pbnu1")
+
+[node name="Carrot7" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(456, 200)
+texture = SubResource("AtlasTexture_nwmpf")
+
+[node name="Carrot8" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(472, 200)
+texture = SubResource("AtlasTexture_3f7o4")
+
+[node name="Carrot9" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(424, 216)
+texture = SubResource("AtlasTexture_n1rio")
+
+[node name="Carrot10" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(440, 216)
+texture = SubResource("AtlasTexture_4hrvq")
+
+[node name="Carrot11" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(456, 216)
+texture = SubResource("AtlasTexture_d8w1l")
+
+[node name="Carrot12" type="Sprite2D" parent="Crops/Carrots"]
+position = Vector2(472, 216)
+texture = SubResource("AtlasTexture_e23jb")
+
+[node name="Turnips" type="Node2D" parent="Crops"]
+
+[node name="Turnip" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(520, 152)
+texture = SubResource("AtlasTexture_htnfv")
+
+[node name="Turnip2" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(536, 152)
+texture = SubResource("AtlasTexture_ctv37")
+
+[node name="Turnip3" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(552, 152)
+texture = SubResource("AtlasTexture_n0e2t")
+
+[node name="Turnip4" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(520, 168)
+texture = SubResource("AtlasTexture_elohh")
+
+[node name="Turnip5" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(536, 168)
+texture = SubResource("AtlasTexture_r4ecf")
+
+[node name="Turnip6" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(552, 168)
+texture = SubResource("AtlasTexture_gbdnt")
+
+[node name="Turnip7" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(520, 184)
+texture = SubResource("AtlasTexture_1htdv")
+
+[node name="Turnip8" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(536, 184)
+texture = SubResource("AtlasTexture_0dw1b")
+
+[node name="Turnip9" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(552, 184)
+texture = SubResource("AtlasTexture_duaqg")
+
+[node name="Turnip10" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(520, 200)
+texture = SubResource("AtlasTexture_dvd3t")
+
+[node name="Turnip11" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(536, 200)
+texture = SubResource("AtlasTexture_toeef")
+
+[node name="Turnip12" type="Sprite2D" parent="Crops/Turnips"]
+position = Vector2(552, 200)
+texture = SubResource("AtlasTexture_nagua")
+
+[node name="Beets" type="Node2D" parent="Crops"]
+
+[node name="Beet" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(504, 232)
+texture = SubResource("AtlasTexture_birrt")
+
+[node name="Beet2" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(520, 232)
+texture = SubResource("AtlasTexture_t144h")
+
+[node name="Beet3" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(536, 232)
+texture = SubResource("AtlasTexture_pg4je")
+
+[node name="Beet4" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(504, 248)
+texture = SubResource("AtlasTexture_q76b8")
+
+[node name="Beet5" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(520, 248)
+texture = SubResource("AtlasTexture_xeia1")
+
+[node name="Beet6" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(536, 248)
+texture = SubResource("AtlasTexture_8ae8s")
+
+[node name="Beet7" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(504, 264)
+texture = SubResource("AtlasTexture_24jjl")
+
+[node name="Beet8" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(520, 264)
+texture = SubResource("AtlasTexture_ixj26")
+
+[node name="Beet9" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(536, 264)
+texture = SubResource("AtlasTexture_sh50p")
+
+[node name="Beet10" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(504, 280)
+texture = SubResource("AtlasTexture_bhxm7")
+
+[node name="Beet11" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(520, 280)
+texture = SubResource("AtlasTexture_723ow")
+
+[node name="Beet12" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(536, 280)
+texture = SubResource("AtlasTexture_1j2va")
+
+[node name="Beet13" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(504, 296)
+texture = SubResource("AtlasTexture_m4ulk")
+
+[node name="Beet14" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(520, 296)
+texture = SubResource("AtlasTexture_myta3")
+
+[node name="Beet15" type="Sprite2D" parent="Crops/Beets"]
+position = Vector2(536, 296)
+texture = SubResource("AtlasTexture_xvrbh")
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Tree" type="Sprite2D" parent="Trees"]
+position = Vector2(112, 16)
+texture = SubResource("AtlasTexture_sidqs")
+
+[node name="Tree2" type="Sprite2D" parent="Trees"]
+position = Vector2(136, 16)
+texture = SubResource("AtlasTexture_llxwa")
+
+[node name="Tree3" type="Sprite2D" parent="Trees"]
+position = Vector2(160, 16)
+texture = SubResource("AtlasTexture_s2cry")
+
+[node name="Tree4" type="Sprite2D" parent="Trees"]
+position = Vector2(184, 16)
+texture = SubResource("AtlasTexture_mefq2")
+
+[node name="Tree5" type="Sprite2D" parent="Trees"]
+position = Vector2(92, 39.5)
+texture = SubResource("AtlasTexture_hdc8t")
+
+[node name="Tree6" type="Sprite2D" parent="Trees"]
+position = Vector2(116, 39.5)
+texture = SubResource("AtlasTexture_uvvwb")
+
+[node name="Tree7" type="Sprite2D" parent="Trees"]
+position = Vector2(140, 39.5)
+texture = SubResource("AtlasTexture_aawy5")
+
+[node name="Tree8" type="Sprite2D" parent="Trees"]
+position = Vector2(164, 39.5)
+texture = SubResource("AtlasTexture_l3t20")
+
+[node name="Tree9" type="Sprite2D" parent="Trees"]
+position = Vector2(80, 80)
+texture = SubResource("AtlasTexture_cuume")
+
+[node name="Logs" type="Node2D" parent="Trees"]
+
+[node name="Stump" type="Sprite2D" parent="Trees/Logs"]
+position = Vector2(80, 104)
+texture = SubResource("AtlasTexture_wxhd0")
+
+[node name="Log" type="Sprite2D" parent="Trees/Logs"]
+position = Vector2(88, 112)
+texture = SubResource("AtlasTexture_6qxul")
+
+[node name="Log2" type="Sprite2D" parent="Trees/Logs"]
+position = Vector2(96, 120)
+texture = SubResource("AtlasTexture_5il25")
+
+[node name="Players" type="Node2D" parent="."]
+
+[node name="Player" type="Sprite2D" parent="Players"]
+position = Vector2(96, 88)
+texture = SubResource("AtlasTexture_fiyqw")
+
+[node name="Player2" type="Sprite2D" parent="Players"]
+position = Vector2(480, 208)
+texture = SubResource("AtlasTexture_rqi4v")
+
+[node name="Player3" type="Sprite2D" parent="Players"]
+position = Vector2(456, 168)
+texture = SubResource("AtlasTexture_2trp7")
+
+[node name="Player4" type="Sprite2D" parent="Players"]
+position = Vector2(144, 232)
+texture = SubResource("AtlasTexture_h7xym")
+
+[node name="Animals" type="Node2D" parent="."]
+
+[node name="Chickens" type="Node2D" parent="Animals"]
+
+[node name="Chicken" type="Sprite2D" parent="Animals/Chickens"]
+position = Vector2(120, 240)
+texture = SubResource("AtlasTexture_bmnp6")
+
+[node name="Chicken2" type="Sprite2D" parent="Animals/Chickens"]
+position = Vector2(112, 248)
+texture = SubResource("AtlasTexture_4wo48")
+
+[node name="Chicken3" type="Sprite2D" parent="Animals/Chickens"]
+position = Vector2(120, 224)
+texture = SubResource("AtlasTexture_7lw5g")
+
+[node name="Chicken4" type="Sprite2D" parent="Animals/Chickens"]
+position = Vector2(160, 240)
+texture = SubResource("AtlasTexture_6qvku")
+flip_h = true
+
+[node name="Cows" type="Node2D" parent="Animals"]
+
+[node name="Cow" type="Sprite2D" parent="Animals/Cows"]
+position = Vector2(160, 272)
+texture = SubResource("AtlasTexture_gr02a")
+flip_h = true
+
+[node name="Cow2" type="Sprite2D" parent="Animals/Cows"]
+position = Vector2(168, 288)
+texture = SubResource("AtlasTexture_iqlx2")
+flip_h = true
+
+[node name="Boats" type="Node2D" parent="."]
+
+[node name="Boat" type="Sprite2D" parent="Boats"]
+position = Vector2(312, 312)
+texture = SubResource("AtlasTexture_lmx3x")
+
+[node name="Boat2" type="Sprite2D" parent="Boats"]
+position = Vector2(288, 264)
+texture = SubResource("AtlasTexture_gg4ls")
+
+[node name="Rocks" type="Node2D" parent="."]
+
+[node name="WaterRocks" type="Node2D" parent="Rocks"]
+
+[node name="Rock" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(32, 328)
+texture = SubResource("AtlasTexture_ruqhp")
+
+[node name="Rock10" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(0, 320)
+texture = SubResource("AtlasTexture_8ttx1")
+
+[node name="Rock2" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(64, 328)
+texture = SubResource("AtlasTexture_urdud")
+
+[node name="Rock3" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(96, 336)
+texture = SubResource("AtlasTexture_m47dn")
+
+[node name="Rock4" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(120, 336)
+texture = SubResource("AtlasTexture_p1psu")
+
+[node name="Rock5" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(128, 344)
+texture = SubResource("AtlasTexture_jx0ef")
+
+[node name="Rock6" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(136, 352)
+texture = SubResource("AtlasTexture_pwxa1")
+
+[node name="Rock7" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(152, 352)
+texture = SubResource("AtlasTexture_jkacx")
+
+[node name="Rock8" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(168, 352)
+texture = SubResource("AtlasTexture_e244l")
+
+[node name="Rock9" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(184, 352)
+texture = SubResource("AtlasTexture_nkic4")
+
+[node name="Ice" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(64, 352)
+texture = SubResource("AtlasTexture_2fn4o")
+
+[node name="Ice2" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(32, 352)
+texture = SubResource("AtlasTexture_jppp0")
+
+[node name="Ice3" type="Sprite2D" parent="Rocks/WaterRocks"]
+position = Vector2(0, 352)
+texture = SubResource("AtlasTexture_pd3p5")
+
+[node name="GroundRocks" type="Node2D" parent="Rocks"]
+
+[node name="Rock" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(200, 72)
+texture = SubResource("AtlasTexture_j1ffn")
+
+[node name="Rock2" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(224, 80)
+texture = SubResource("AtlasTexture_eific")
+
+[node name="Rock3" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(248, 72)
+texture = SubResource("AtlasTexture_mabl5")
+
+[node name="Rock4" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(136, 304)
+texture = SubResource("AtlasTexture_kdp2p")
+
+[node name="Rock5" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(352, 144)
+texture = SubResource("AtlasTexture_uid7p")
+
+[node name="Rock6" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(320, 144)
+texture = SubResource("AtlasTexture_73y31")
+
+[node name="Rock7" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(432, 72)
+texture = SubResource("AtlasTexture_h7rpe")
+
+[node name="Rock8" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(464, 96)
+texture = SubResource("AtlasTexture_4c7p0")
+
+[node name="Rock9" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(448, 96)
+texture = SubResource("AtlasTexture_1v2jj")
+
+[node name="Rock10" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(480, 88)
+texture = SubResource("AtlasTexture_jlcrh")
+
+[node name="Rock11" type="Sprite2D" parent="Rocks/GroundRocks"]
+position = Vector2(496, 88)
+texture = SubResource("AtlasTexture_2tiem")
+
+[node name="Plants" type="Node2D" parent="."]
+
+[node name="WaterLily" type="Node2D" parent="Plants"]
+
+[node name="WaterLily" type="Sprite2D" parent="Plants/WaterLily"]
+position = Vector2(240, 168)
+texture = SubResource("AtlasTexture_yxocu")
+
+[node name="WaterLily2" type="Sprite2D" parent="Plants/WaterLily"]
+position = Vector2(224, 200)
+texture = SubResource("AtlasTexture_hklhj")
+
+[node name="WaterLily3" type="Sprite2D" parent="Plants/WaterLily"]
+position = Vector2(232, 184)
+texture = SubResource("AtlasTexture_cpaaa")
+
+[node name="WaterLily4" type="Sprite2D" parent="Plants/WaterLily"]
+position = Vector2(216, 216)
+texture = SubResource("AtlasTexture_8ah10")
+
+[node name="Grass" type="Node2D" parent="Plants"]
+
+[node name="Plant" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(72, 216)
+texture = SubResource("AtlasTexture_vsbdg")
+
+[node name="Plant2" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(88, 216)
+texture = SubResource("AtlasTexture_ge6yy")
+
+[node name="Plant3" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(104, 216)
+texture = SubResource("AtlasTexture_hnu2a")
+
+[node name="Plant4" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(64, 200)
+texture = SubResource("AtlasTexture_vsbdg")
+
+[node name="Plant5" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(80, 200)
+texture = SubResource("AtlasTexture_ge6yy")
+
+[node name="Plant6" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(96, 200)
+texture = SubResource("AtlasTexture_hnu2a")
+
+[node name="Plant7" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(80, 176)
+texture = SubResource("AtlasTexture_vsbdg")
+
+[node name="Plant8" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(96, 176)
+texture = SubResource("AtlasTexture_ge6yy")
+
+[node name="Plant9" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(112, 176)
+texture = SubResource("AtlasTexture_hnu2a")
+
+[node name="Plant10" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(64, 160)
+texture = SubResource("AtlasTexture_vsbdg")
+
+[node name="Plant11" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(80, 160)
+texture = SubResource("AtlasTexture_ge6yy")
+
+[node name="Plant12" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(96, 160)
+texture = SubResource("AtlasTexture_hnu2a")
+
+[node name="Plant13" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(496, 320)
+texture = SubResource("AtlasTexture_vsbdg")
+
+[node name="Plant14" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(512, 320)
+texture = SubResource("AtlasTexture_ge6yy")
+
+[node name="Plant15" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(528, 320)
+texture = SubResource("AtlasTexture_hnu2a")
+
+[node name="Plant16" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(320, 288)
+texture = SubResource("AtlasTexture_vsbdg")
+
+[node name="Plant17" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(336, 288)
+texture = SubResource("AtlasTexture_ge6yy")
+
+[node name="Plant18" type="Sprite2D" parent="Plants/Grass"]
+position = Vector2(304, 232)
+texture = SubResource("AtlasTexture_hnu2a")
