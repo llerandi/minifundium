@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bt8o8luf10hg5"]
+[gd_scene format=3 uid="uid://bt8o8luf10hg5"]
 
 [ext_resource type="Texture2D" uid="uid://dvfoug0opr078" path="res://assets/game/animals/red_chicken_spritesheet.png" id="1_be5x3"]
 [ext_resource type="Script" uid="uid://dau8musitbpjj" path="res://scripts/state/state_machine.gd" id="2_awcwn"]
@@ -63,9 +63,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_31inw"]
 radius = 6.0
 
-[node name="Chicken" type="CharacterBody2D"]
+[node name="Chicken" type="CharacterBody2D" unique_id=805823090]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=910627152]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_j5yl6")
 animation = &"down"
@@ -73,22 +73,22 @@ autoplay = "front"
 frame = 3
 frame_progress = 0.948666
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=689753521]
 position = Vector2(-1, -6)
 shape = SubResource("CircleShape2D_31inw")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1301747514]
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=183545014 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_awcwn")
 initial_state = NodePath("Idle")
 
-[node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("chicken", "sprite")]
+[node name="Idle" type="Node" parent="StateMachine" unique_id=722229298 node_paths=PackedStringArray("chicken", "sprite")]
 script = ExtResource("3_31inw")
 chicken = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 
-[node name="Movement" type="Node" parent="StateMachine" node_paths=PackedStringArray("chicken", "sprite", "navigation")]
+[node name="Movement" type="Node" parent="StateMachine" unique_id=565230979 node_paths=PackedStringArray("chicken", "sprite", "navigation")]
 script = ExtResource("4_31inw")
 chicken = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")

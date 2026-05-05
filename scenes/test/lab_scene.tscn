@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://30j5f7nn3arv" path="res://scenes/ui/game_ui.tscn" id="5_8yhvn"]
 [ext_resource type="PackedScene" uid="uid://dtttc27sfnrm7" path="res://scenes/components/place_crops_cursor.tscn" id="6_41xj4"]
 [ext_resource type="Script" uid="uid://ciuww603pd2if" path="res://scenes/components/place_crops_cursor.gd" id="7_2e6pb"]
+[ext_resource type="PackedScene" uid="uid://bt8o8luf10hg5" path="res://scenes/characters/chicken/chicken.tscn" id="8_j7eoi"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nvfk2"]
 b = Vector2(384, 0)
@@ -23,9 +24,9 @@ a = Vector2(-384, 160)
 b = Vector2(-384, 0)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bddwv"]
-vertices = PackedVector2Array(486, 246, 154, 246, 154, 138, 486, 138)
+vertices = PackedVector2Array(310, 214, 266, 214, 266, 154, 310, 154)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(144, 128, 496, 128, 496, 256, 144, 256)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(256, 144, 320, 144, 320, 224, 256, 224)])
 
 [node name="MainSceneTilemap" type="Node2D" unique_id=1829135246]
 
@@ -53,7 +54,7 @@ grass_layer = NodePath("../GameTileMap/Grass")
 tilled_layer = NodePath("../GameTileMap/Tilled")
 
 [node name="Player" parent="." unique_id=1995064908 instance=ExtResource("4_vpk42")]
-position = Vector2(320, 240)
+position = Vector2(320, 232)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=443787006]
 zoom = Vector2(2, 2)
@@ -86,3 +87,6 @@ shape = SubResource("SegmentShape2D_s0xxn")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens" unique_id=1024908243]
 navigation_polygon = SubResource("NavigationPolygon_bddwv")
+
+[node name="Chicken" parent="Chickens" unique_id=1785310119 instance=ExtResource("8_j7eoi")]
+position = Vector2(304, 232)
