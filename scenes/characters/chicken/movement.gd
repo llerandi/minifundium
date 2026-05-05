@@ -16,8 +16,8 @@ extends State
 @export var navigation: NavigationAgent2D
 
 # Configuring the speed of the chicken movement
-@export var speed_min: float = 1.0
-@export var speed_max: float = 6.0
+@export var speed_min: float = 6.0
+@export var speed_max: float = 10.0
 var speed: float
 
 # Called by the state machine once when the state becomes active
@@ -38,6 +38,10 @@ func _on_process(_delta: float) -> void:
 # Called by the state machine's _physics_process function at a fixed interval
 ## Place for all physics-related code (e.g., moving a character)
 func _on_physics_process(_delta: float) -> void:
+	if navigation.is_navigation_finished():
+		set_position()
+		return
+		
 	# To get the position
 	var target_position: Vector2 = navigation.get_next_path_position()
 	# To get the facing direction
@@ -58,9 +62,11 @@ func _ready() -> void:
 
 func chicken_setup() -> void:
 	# The navigation agent needs to after the first physics frame and then starts the process
-	await get_tree().physics_frame
+	#await get_tree().physics_frame
+	await get_tree().create_timer(randf_range(0.1,0.5)).timeout
 	
 	set_position()
+	
 
 func set_position() -> void:
 	var target_position: Vector2 = NavigationServer2D.map_get_random_point(
