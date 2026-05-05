@@ -22,6 +22,11 @@ b = Vector2(0, 160)
 a = Vector2(-384, 160)
 b = Vector2(-384, 0)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bddwv"]
+vertices = PackedVector2Array(486, 246, 154, 246, 154, 138, 486, 138)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(144, 128, 496, 128, 496, 256, 144, 256)])
+
 [node name="MainSceneTilemap" type="Node2D" unique_id=1829135246]
 
 [node name="GameTileMap" type="Node2D" parent="." unique_id=940622308]
@@ -76,3 +81,8 @@ shape = SubResource("SegmentShape2D_j7eoi")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="WaterColliders" unique_id=103888983]
 position = Vector2(512, 112)
 shape = SubResource("SegmentShape2D_s0xxn")
+
+[node name="Chickens" type="Node2D" parent="." unique_id=2121401722]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens" unique_id=1024908243]
+navigation_polygon = SubResource("NavigationPolygon_bddwv")
