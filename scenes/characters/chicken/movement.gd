@@ -39,6 +39,7 @@ func _on_process(_delta: float) -> void:
 ## Place for all physics-related code (e.g., moving a character)
 func _on_physics_process(_delta: float) -> void:
 	if navigation.is_navigation_finished():
+		print(chicken.global_position)
 		set_position()
 		return
 		
