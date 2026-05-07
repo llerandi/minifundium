@@ -17,6 +17,8 @@ Here is what you can expect from the game:
 
 ![Movement](./images/movement.png)
 
+![Minifundium-01](./images/minifundium-01.png)
+
 ---
 
 ## 🚀 Installation & Running the Game
