@@ -24,7 +24,9 @@ func on_harvest() -> void:
 	var crop_ready_harvest = carrot_scene_path.instantiate() as Node2D
 	crop_ready_harvest.global_position = global_position
 	
-	get_parent().add_child(crop_ready_harvest)
+	#get_parent(.add_child(crop_ready_harvest)
+	var crops_container = get_tree().current_scene.get_node("Crops")
+	crops_container.add_child(crop_ready_harvest)
 	queue_free()
 
 func on_maturity() -> void:
@@ -45,3 +47,6 @@ func _process(delta: float) -> void:
 	
 	if growing_state == DataTypes.Growth.READY_HARVESTING:
 		particles_growing.emitting = true
+
+func is_harvestable() -> bool:
+	return growing_state == DataTypes.Growth.CROP

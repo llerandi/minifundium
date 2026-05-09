@@ -9,7 +9,7 @@
 # Inheritance
 extends State
 
-@export var chicken: CharacterBody2D
+@export var chicken: Chicken
 @export var sprite: AnimatedSprite2D
 
 # Configuring the target position of the ckicken movement
@@ -24,6 +24,14 @@ var speed: float
 ## Setup logic (e.g., starting an animation or enabling a collision shape)
 func _on_enter() -> void:
 	sprite.play("down")
+	
+	# Condition to handle the targeting of harvestable crop
+	if chicken.target_crop != null and is_instance_valid(chicken.target_crop):
+		speed = speed_max # Maxing the speed while harvesting
+		await get_tree().physics_frame # Wait a frame just in case
+		navigation.target_position = chicken.target_crop.global_position
+	else:
+		call_deferred("chicken_setup")
 
 # Called by the state machine just before switching to a new state
 ## For cleanup (e.g., stopping the current animation)
@@ -39,7 +47,11 @@ func _on_process(_delta: float) -> void:
 ## Place for all physics-related code (e.g., moving a character)
 func _on_physics_process(_delta: float) -> void:
 	if navigation.is_navigation_finished():
-		set_position()
+		if chicken.target_crop != null and is_instance_valid(chicken.target_crop):
+			transition.emit("Harvest") # State for the ckicken harvest mode
+		else:
+			print(chicken.global_position)
+			set_position()
 		return
 		
 	# To get the position

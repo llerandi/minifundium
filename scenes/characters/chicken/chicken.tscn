@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bt8o8luf10hg5"]
 
 [ext_resource type="Texture2D" uid="uid://dvfoug0opr078" path="res://assets/game/animals/red_chicken_spritesheet.png" id="1_be5x3"]
+[ext_resource type="Script" uid="uid://bj0ylr0k0j5kr" path="res://scenes/characters/chicken/chicken.gd" id="1_r6a33"]
 [ext_resource type="Script" uid="uid://dau8musitbpjj" path="res://scripts/state/state_machine.gd" id="2_awcwn"]
 [ext_resource type="Script" uid="uid://kr7jcdntvrln" path="res://scenes/characters/chicken/idle.gd" id="3_31inw"]
 [ext_resource type="Script" uid="uid://bhfkfkg2jkq7u" path="res://scenes/characters/chicken/movement.gd" id="4_31inw"]
+[ext_resource type="Script" uid="uid://celfn5u2mmyww" path="res://scenes/characters/chicken/harvest.gd" id="6_asyyu"]
+[ext_resource type="PackedScene" uid="uid://bn0bv65mfn3d4" path="res://scenes/components/hitbox.tscn" id="7_hv82h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r6a33"]
 atlas = ExtResource("1_be5x3")
@@ -63,7 +66,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_31inw"]
 radius = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wh5lc"]
+radius = 6.0827627
+
 [node name="Chicken" type="CharacterBody2D" unique_id=805823090]
+collision_layer = 2
+script = ExtResource("1_r6a33")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=910627152]
 position = Vector2(0, -6)
@@ -93,3 +101,15 @@ script = ExtResource("4_31inw")
 chicken = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 navigation = NodePath("../../NavigationAgent2D")
+
+[node name="Harvest" type="Node" parent="StateMachine" unique_id=50371574 node_paths=PackedStringArray("chicken", "sprite")]
+script = ExtResource("6_asyyu")
+chicken = NodePath("../..")
+sprite = NodePath("../../AnimatedSprite2D")
+
+[node name="Hitbox" parent="." unique_id=1674842339 instance=ExtResource("7_hv82h")]
+
+[node name="HitboxCollision" type="CollisionShape2D" parent="Hitbox" unique_id=1450080599]
+position = Vector2(-1, -5)
+shape = SubResource("CircleShape2D_wh5lc")
+debug_color = Color(0, 0.9843137, 0, 0.41960785)
