@@ -45,3 +45,6 @@ func _process(delta: float) -> void:
 	
 	if growing_state == DataTypes.Growth.READY_HARVESTING:
 		particles_growing.emitting = true
+
+func is_harvestable() -> bool:
+	return growing_state == DataTypes.Growth.READY_HARVESTING
