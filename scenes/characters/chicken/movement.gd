@@ -24,6 +24,14 @@ var speed: float
 ## Setup logic (e.g., starting an animation or enabling a collision shape)
 func _on_enter() -> void:
 	sprite.play("down")
+	
+	# Condition to handle the targeting of harvestable crop
+	if chicken.target_crop != null and is_instance_valid(chicken.target_crop):
+		speed = speed_max # Maxing the speed while harvesting
+		await get_tree().physics_frame # Wait a frame just in case
+		navigation.target_position = chicken.target_crop.global_position
+	else:
+		call_deferred("chicken_setup")
 
 # Called by the state machine just before switching to a new state
 ## For cleanup (e.g., stopping the current animation)
