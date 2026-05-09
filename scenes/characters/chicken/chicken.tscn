@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dau8musitbpjj" path="res://scripts/state/state_machine.gd" id="2_awcwn"]
 [ext_resource type="Script" uid="uid://kr7jcdntvrln" path="res://scenes/characters/chicken/idle.gd" id="3_31inw"]
 [ext_resource type="Script" uid="uid://bhfkfkg2jkq7u" path="res://scenes/characters/chicken/movement.gd" id="4_31inw"]
+[ext_resource type="Script" uid="uid://celfn5u2mmyww" path="res://scenes/characters/chicken/harvest.gd" id="6_asyyu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r6a33"]
 atlas = ExtResource("1_be5x3")
@@ -95,3 +96,8 @@ script = ExtResource("4_31inw")
 chicken = NodePath("../..")
 sprite = NodePath("../../AnimatedSprite2D")
 navigation = NodePath("../../NavigationAgent2D")
+
+[node name="Harvest" type="Node" parent="StateMachine" unique_id=50371574 node_paths=PackedStringArray("chicken", "sprite")]
+script = ExtResource("6_asyyu")
+chicken = NodePath("../..")
+sprite = NodePath("../../AnimatedSprite2D")
