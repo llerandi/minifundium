@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bt8o8luf10hg5"]
 
 [ext_resource type="Texture2D" uid="uid://dvfoug0opr078" path="res://assets/game/animals/red_chicken_spritesheet.png" id="1_be5x3"]
+[ext_resource type="Script" uid="uid://bj0ylr0k0j5kr" path="res://scenes/characters/chicken/chicken.gd" id="1_r6a33"]
 [ext_resource type="Script" uid="uid://dau8musitbpjj" path="res://scripts/state/state_machine.gd" id="2_awcwn"]
 [ext_resource type="Script" uid="uid://kr7jcdntvrln" path="res://scenes/characters/chicken/idle.gd" id="3_31inw"]
 [ext_resource type="Script" uid="uid://bhfkfkg2jkq7u" path="res://scenes/characters/chicken/movement.gd" id="4_31inw"]
@@ -64,6 +65,7 @@ animations = [{
 radius = 6.0
 
 [node name="Chicken" type="CharacterBody2D" unique_id=805823090]
+script = ExtResource("1_r6a33")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=910627152]
 position = Vector2(0, -6)
