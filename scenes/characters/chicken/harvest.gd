@@ -10,6 +10,11 @@ func _on_enter() -> void:
 	
 	if chicken.target_crop != null and is_instance_valid(chicken.target_crop):
 		chicken.target_crop.on_harvest()
+		
+		# To get the position
+		var target_position: Vector2 = chicken.target_crop.global_position
+		# To get the facing direction
+		var target_direction: Vector2 = chicken.global_position.direction_to(target_position)
 	
 	chicken.target_crop = null
 	
