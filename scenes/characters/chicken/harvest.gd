@@ -15,3 +15,5 @@ func _on_enter() -> void:
 	
 	transition.emit("Idle")
 
+func _on_exit() -> void:
+	sprite.stop()
