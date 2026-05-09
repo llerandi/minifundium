@@ -9,7 +9,7 @@
 # Inheritance
 extends State
 
-@export var chicken: CharacterBody2D
+@export var chicken: Chicken
 @export var sprite: AnimatedSprite2D
 
 # Configuring the target position of the ckicken movement
