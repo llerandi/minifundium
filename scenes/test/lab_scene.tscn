@@ -24,9 +24,9 @@ a = Vector2(-384, 160)
 b = Vector2(-384, 0)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_bddwv"]
-vertices = PackedVector2Array(310, 214, 266, 214, 266, 154, 310, 154)
+vertices = PackedVector2Array(486, 246, 154, 246, 154, 130, 486, 130)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(256, 144, 320, 144, 320, 224, 256, 224)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(144, 120, 496, 120, 496, 256, 144, 256)])
 
 [node name="MainSceneTilemap" type="Node2D" unique_id=1829135246]
 
