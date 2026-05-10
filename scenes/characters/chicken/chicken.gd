@@ -5,6 +5,10 @@ class_name Chicken extends CharacterBody2D
 
 var target_crop: Node2D = null
 
+func _ready() -> void:
+	if brain and brain.has_method("setup"):
+		brain.setup(self)
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("auto_harvest"):
 		command_harvest()
