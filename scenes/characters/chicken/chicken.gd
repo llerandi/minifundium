@@ -24,6 +24,11 @@ func command_harvest() -> void:
 		state.transition_to("Movement")
 	else:
 		print("No crops ready for harvest were found...")
+
+# The states will call this function after finish the current task
+func request_next_action(current_state_name: String) -> void:
+	if brain and brain.has_method("decide_next_action"):
+		brain.decide_next_action(current_state_name)
 		
 func find_ready_crop() -> Node2D:
 	# Searching for the node called Crops in the actual scene, here all the crops will be listed within
