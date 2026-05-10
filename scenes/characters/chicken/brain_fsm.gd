@@ -7,12 +7,13 @@ var chicken: Chicken
 func setup(_chicken: Chicken) -> void:
 	chicken = _chicken
 
+# Will be executed after idle_timer in idle.gd ends
 func decide_next_action(current_state: String) -> void:
 	print("The current chicken's state is: ", current_state)
-	if current_state == "Idle" or current_state == "Harvest":
-		var crop = chicken.find_ready_crop()
-		if crop:
-			chicken.target_crop = crop
-			chicken.state.transition_to("Movement")
-		else:
-			chicken.state.transition_to("Idle")
+	var crop = chicken.find_ready_crop()
+	if crop:
+		chicken.target_crop = crop
+		chicken.state.transition_to("Movement")
+	else:
+		# If no ready to harvest crop then, walk for a while
+		chicken.state.transition_to("Movement")
