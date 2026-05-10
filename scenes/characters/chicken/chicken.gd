@@ -1,6 +1,8 @@
 class_name Chicken extends CharacterBody2D
 
 @onready var state: StateMachine = $StateMachine
+@export var brain: Node # Will handle the different type of brain depending on the lab selected
+
 var target_crop: Node2D = null
 
 func _unhandled_input(event: InputEvent) -> void:
