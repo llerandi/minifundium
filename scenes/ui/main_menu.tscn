@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://diakmffijwovr"]
+[gd_scene format=3 uid="uid://diakmffijwovr"]
 
 [ext_resource type="Script" uid="uid://di7dg7m3yyisx" path="res://scenes/ui/main_menu.gd" id="1_1g8jr"]
 [ext_resource type="PackedScene" uid="uid://craum7gcinrq7" path="res://scenes/ui/main_menu_background.tscn" id="1_fe2o3"]
 [ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_sl1te"]
 
-[node name="MainMenu" type="CanvasLayer"]
+[node name="MainMenu" type="CanvasLayer" unique_id=1062695915]
 script = ExtResource("1_1g8jr")
 
-[node name="MainMenuBackground" parent="." instance=ExtResource("1_fe2o3")]
+[node name="MainMenuBackground" parent="." unique_id=752373271 instance=ExtResource("1_fe2o3")]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1186889925]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -18,31 +18,31 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_sl1te")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1236389950]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="GameTitleText" type="Label" parent="MarginContainer/MarginContainer"]
+[node name="GameTitleText" type="Label" parent="MarginContainer/MarginContainer" unique_id=2001939990]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Minifundium"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=905474806]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=294001649]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_type_variation = &"MainMenuButton"
 
-[node name="StartButtonText" type="Label" parent="MarginContainer/VBoxContainer/StartButton"]
+[node name="StartButtonText" type="Label" parent="MarginContainer/VBoxContainer/StartButton" unique_id=2043173068]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,13 +59,13 @@ text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=828957030]
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"MainMenuButton"
 
-[node name="ExitButtonText" type="Label" parent="MarginContainer/VBoxContainer/ExitButton"]
+[node name="ExitButtonText" type="Label" parent="MarginContainer/VBoxContainer/ExitButton" unique_id=1599615642]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -82,12 +82,12 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer" unique_id=1550035614]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 
-[node name="GameVersionText" type="Label" parent="MarginContainer/MarginContainer2"]
+[node name="GameVersionText" type="Label" parent="MarginContainer/MarginContainer2" unique_id=809256923]
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "v0.1.0 (alpha)"
