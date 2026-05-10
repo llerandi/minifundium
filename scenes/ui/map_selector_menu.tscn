@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://bwnd8msgiuqs4"]
+
+[ext_resource type="Script" uid="uid://bsighmqgpwhbl" path="res://scenes/ui/map_selector_menu.gd" id="1_1w6rx"]
+[ext_resource type="PackedScene" uid="uid://craum7gcinrq7" path="res://scenes/ui/main_menu_background.tscn" id="2_v5cqp"]
+[ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="3_t0yoe"]
+
+[node name="MapSelectorMenu" type="CanvasLayer" unique_id=1498892528]
+script = ExtResource("1_1w6rx")
+
+[node name="MainMenuBackground" parent="." unique_id=2017146623 instance=ExtResource("2_v5cqp")]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2097067643]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_t0yoe")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=32595570]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="GameTitleText" type="Label" parent="MarginContainer/MarginContainer" unique_id=1944118189]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Minifundium"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1305827936]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SandboxButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1715927669]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"MainMenuButton"
+
+[node name="SandboxButtonText" type="Label" parent="MarginContainer/VBoxContainer/SandboxButton" unique_id=1785001218]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sandbox"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lab1Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=936553719]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"MainMenuButton"
+
+[node name="Lab1ButtonText" type="Label" parent="MarginContainer/VBoxContainer/Lab1Button" unique_id=1563942730]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lab 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lab2Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2062668466]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"MainMenuButton"
+
+[node name="Lab2ButtonText" type="Label" parent="MarginContainer/VBoxContainer/Lab2Button" unique_id=164719035]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lab 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lab3Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=226134134]
+visible = false
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"MainMenuButton"
+
+[node name="Lab3ButtonText" type="Label" parent="MarginContainer/VBoxContainer/Lab3Button" unique_id=78457256]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lab 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Lab4Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1587401525]
+visible = false
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"MainMenuButton"
+
+[node name="Lab4ButtonText" type="Label" parent="MarginContainer/VBoxContainer/Lab4Button" unique_id=1153918164]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lab 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1785132659]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"MainMenuButton"
+
+[node name="ExitButtonText" type="Label" parent="MarginContainer/VBoxContainer/BackButton" unique_id=1332984192]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.5
+offset_top = -11.5
+offset_right = 14.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer" unique_id=1219040561]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="GameVersionText" type="Label" parent="MarginContainer/MarginContainer2" unique_id=599505427]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "v0.1.0 (alpha)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SandboxButton" to="." method="_on_sandbox_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Lab1Button" to="." method="_on_lab_1_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Lab2Button" to="." method="_on_lab_2_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Lab3Button" to="." method="_on_lab_3_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Lab4Button" to="." method="_on_lab_4_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
