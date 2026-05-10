@@ -8,6 +8,7 @@ func setup(_chicken: Chicken) -> void:
 	chicken = _chicken
 
 func decide_next_action(current_state: String) -> void:
+	print("The current chicken's state is: ", current_state)
 	if current_state == "Idle" or current_state == "Harvest":
 		var crop = chicken.find_ready_crop()
 		if crop:
