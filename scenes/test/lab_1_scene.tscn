@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dtttc27sfnrm7" path="res://scenes/components/place_crops_cursor.tscn" id="6_5eali"]
 [ext_resource type="Script" uid="uid://ciuww603pd2if" path="res://scenes/components/place_crops_cursor.gd" id="7_ud8d4"]
 [ext_resource type="PackedScene" uid="uid://bt8o8luf10hg5" path="res://scenes/characters/chicken/chicken.tscn" id="8_nwutm"]
+[ext_resource type="Script" uid="uid://10kp8u2gemdn" path="res://scenes/characters/chicken/brain_commanded.gd" id="9_aucwy"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nvfk2"]
 b = Vector2(384, 0)
@@ -88,5 +89,9 @@ shape = SubResource("SegmentShape2D_s0xxn")
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens" unique_id=1024908243]
 navigation_polygon = SubResource("NavigationPolygon_bddwv")
 
-[node name="Chicken" parent="Chickens" unique_id=1785310119 instance=ExtResource("8_nwutm")]
+[node name="Chicken" parent="Chickens" unique_id=1785310119 node_paths=PackedStringArray("brain") instance=ExtResource("8_nwutm")]
 position = Vector2(304, 232)
+brain = NodePath("Node")
+
+[node name="Node" type="Node" parent="Chickens/Chicken" unique_id=2106825428]
+script = ExtResource("9_aucwy")
