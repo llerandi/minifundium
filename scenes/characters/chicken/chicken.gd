@@ -10,13 +10,16 @@ func _ready() -> void:
 		brain.setup(self)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("auto_harvest"):
+	if event.is_action_pressed("auto_harvest"): # Will also work for labs 3 and 4
 		command_harvest()
 
 func command_harvest() -> void:
 	target_crop = find_ready_crop()
 	
 	if target_crop != null:
+		if brain and brain.has_method("learn_from_command"): # Labs 3 and 4
+			brain.learn_from_command("Idle", "Harvest")
+		
 		print("A crop ready for harvest was found. On the way to harvest it...")
 		state.transition_to("Movement")
 	else:
