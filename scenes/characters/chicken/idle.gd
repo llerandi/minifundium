@@ -9,7 +9,7 @@
 # Inheritance
 extends State
 
-@export var chicken: CharacterBody2D
+@export var chicken: Chicken
 @export var sprite: AnimatedSprite2D
 
 # Variables to handle the interval time between idle and movement
