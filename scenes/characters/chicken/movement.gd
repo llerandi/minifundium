@@ -51,7 +51,8 @@ func _on_physics_process(_delta: float) -> void:
 			transition.emit("Harvest") # State for the ckicken harvest mode
 		else:
 			print(chicken.global_position)
-			set_position()
+			#set_position()
+			transition.emit("Idle")
 		return
 		
 	# To get the position

@@ -9,7 +9,7 @@
 # Inheritance
 extends State
 
-@export var chicken: CharacterBody2D
+@export var chicken: Chicken
 @export var sprite: AnimatedSprite2D
 
 # Variables to handle the interval time between idle and movement
@@ -50,7 +50,10 @@ func _on_physics_process(_delta: float) -> void:
 # Called by the state machine to check the conditions for transitioning to another state
 func _on_next_transitions() -> void:
 	if idle_timeout:
-		transition.emit("Movement")
+		if chicken.brain.has_method("decide_next_action"):
+			chicken.brain.decide_next_action(chicken.state.to_string())
+		else:
+			transition.emit("Movement")
 
 # Override the ready function
 func _ready() -> void:
@@ -66,3 +69,4 @@ func _ready() -> void:
 # Function for handling the idle timeout
 func on_idle_timeout() -> void:
 	idle_timeout = true
+	#chicken.request_next_action("Movement")
