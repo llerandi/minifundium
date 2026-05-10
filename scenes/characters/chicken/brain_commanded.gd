@@ -10,3 +10,5 @@ func on_player_command() -> void:
 	if crop:
 		chicken.target_crop = crop
 		chicken.state.transition_to("Movement")
+
+# Won't have the "decide_next_action" due is commanded by user
