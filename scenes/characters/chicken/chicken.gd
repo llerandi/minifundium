@@ -11,7 +11,8 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("auto_harvest"): # Will also work for labs 3 and 4
-		command_harvest()
+		if brain.has_method("on_player_command"): # Lab 1
+			command_harvest()
 
 func command_harvest() -> void:
 	target_crop = find_ready_crop()
@@ -36,8 +37,10 @@ func find_ready_crop() -> Node2D:
 	
 	if crops_node:
 		for crop in crops_node.get_children():
-			if crop.has_method("is_harvestable") and crop.is_harvestable():
-				return crop # Returning the first crop ready to be harvested
-			return crop # Returning the first crop ready to be harvested
+			#if crop.has_method("is_harvestable") and crop.is_harvestable():
+				#return crop # Returning the first crop ready to be harvested
+			if crop.has_node("Pickup"):
+				return crop
+			#return crop # Returning the first crop ready to be harvested
 	
 	return null
