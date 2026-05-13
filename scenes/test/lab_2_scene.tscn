@@ -29,7 +29,7 @@ vertices = PackedVector2Array(486, 246, 154, 246, 154, 130, 486, 130)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(144, 120, 496, 120, 496, 256, 144, 256)])
 
-[node name="Lab1" type="Node2D" unique_id=1829135246]
+[node name="Lab2" type="Node2D" unique_id=1829135246]
 
 [node name="GameTileMap" type="Node2D" parent="." unique_id=940622308]
 
