@@ -19,7 +19,7 @@ func _on_lab_2_button_pressed() -> void:
 	get_tree().change_scene_to_file(lab_2_scene_path)
 
 func _on_lab_3_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file(lab_3_scene_path) # Replace with function body.
 
 func _on_lab_4_button_pressed() -> void:
 	pass # Replace with function body.
