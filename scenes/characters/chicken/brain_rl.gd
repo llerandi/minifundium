@@ -9,3 +9,7 @@ var matrix = {
 	"idle": {"idle": 1, "harvest": 1},
 	"harvest": {"idle": 1, "harvest": 1}
 }
+
+func setup(_chicken: Chicken) -> void:
+	chicken = _chicken
+
