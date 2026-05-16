@@ -91,7 +91,7 @@ navigation_polygon = SubResource("NavigationPolygon_bddwv")
 
 [node name="Chicken" parent="Chickens" unique_id=1785310119 node_paths=PackedStringArray("brain") instance=ExtResource("8_nwutm")]
 position = Vector2(304, 232)
-brain = NodePath("Node")
+brain = NodePath("Brain")
 
-[node name="Node" type="Node" parent="Chickens/Chicken" unique_id=2106825428]
+[node name="Brain" type="Node" parent="Chickens/Chicken" unique_id=2106825428]
 script = ExtResource("9_aucwy")
