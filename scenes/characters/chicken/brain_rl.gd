@@ -19,3 +19,5 @@ func on_player_command() -> void:
 func decide_next_action() -> void:
 	pass
 
+func _choose_weighted_action() -> void:
+	pass
