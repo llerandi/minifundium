@@ -14,7 +14,16 @@ func setup(_chicken: Chicken) -> void:
 	chicken = _chicken
 
 func on_player_command() -> void:
-	pass
+	var crop = chicken.find_ready_crop()
+	if crop:
+		matrix[last_state]["harvest"] += 1 # Incrementing the weight of the decision
+		print("The chicken learnt")
+		
+		chicken.target_crop = crop
+		last_state = "harvest"
+		chicken.state.transition_to("Movement")
+	else:
+		print("No crops ready to be harvested")
 
 func decide_next_action() -> void:
 	pass
