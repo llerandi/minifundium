@@ -29,10 +29,34 @@ func decide_next_action(current_state: String) -> void:
 	var next_action = _choose_weighted_action()
 	
 	if next_action == "Harvest":
-		pass
+		var crop = chicken.find_ready_crop()
+		if crop:
+			print("Autonomous decision: Harvest")
+			chicken.target_crop = crop
+			last_state = "Harvest"
+			chicken.state.transition_to("Movement")
+		else:
+			last_state = "Idle"
+			chicken.state.transition_to("Movement")
 	else:
+		print("Autonomous decision: Idle")
 		last_state = "Idle"
 		chicken.state.transition_to("Movement")
 
 func _choose_weighted_action() -> String:
+	var choices = matrix[last_state]
+	var total_weight = 0
+	
+	# Sum the weights in the corresponding row
+	for w in choices.values():
+		total_weight += w
+	
+	var random_val = randi() % total_weight
+	var current_sum = 0
+	
+	for state in choices.keys():
+		current_sum += choices[state]
+		if random_val < current_sum:
+			return state
+	
 	return "Idle"
