@@ -16,3 +16,6 @@ func setup(_chicken: Chicken) -> void:
 func on_player_command() -> void:
 	pass
 
+func decide_next_action() -> void:
+	pass
+
