@@ -25,8 +25,14 @@ func on_player_command() -> void:
 	else:
 		print("No crops ready to be harvested")
 
-func decide_next_action() -> void:
-	pass
+func decide_next_action(current_state: String) -> void:
+	var next_action = _choose_weighted_action()
+	
+	if next_action == "Harvest":
+		pass
+	else:
+		last_state = "Idle"
+		chicken.state.transition_to("Movement")
 
-func _choose_weighted_action() -> void:
-	pass
+func _choose_weighted_action() -> String:
+	return "Idle"
