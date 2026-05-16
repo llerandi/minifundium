@@ -13,3 +13,6 @@ var matrix = {
 func setup(_chicken: Chicken) -> void:
 	chicken = _chicken
 
+func on_player_command() -> void:
+	pass
+
