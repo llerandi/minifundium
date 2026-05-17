@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dtttc27sfnrm7" path="res://scenes/components/place_crops_cursor.tscn" id="6_gto1b"]
 [ext_resource type="Script" uid="uid://ciuww603pd2if" path="res://scenes/components/place_crops_cursor.gd" id="7_mv7kt"]
 [ext_resource type="PackedScene" uid="uid://bt8o8luf10hg5" path="res://scenes/characters/chicken/chicken.tscn" id="8_rxx8o"]
+[ext_resource type="Script" uid="uid://dhjf4hb2034fp" path="res://scenes/test/brain_rl_group.gd" id="9_kcnad"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nvfk2"]
 b = Vector2(384, 0)
@@ -93,3 +94,4 @@ position = Vector2(304, 232)
 brain = NodePath("Brain")
 
 [node name="Brain" type="Node" parent="Chickens/Chicken" unique_id=1691065535]
+script = ExtResource("9_kcnad")
