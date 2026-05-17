@@ -34,4 +34,19 @@ func decide_next_action(current_state: String) -> void:
 	chicken.state.transition_to("Movement")
 
 func _choose_weighted_action() -> String:
+	var choices = GlobalAi.matrix[last_state]
+	var total_weight = 0
+	
+	# Sum the weights in the corresponding row
+	for w in choices.values():
+		total_weight += w
+	
+	var random_val = randi() % total_weight
+	var current_sum = 0
+	
+	for state in choices.keys():
+		current_sum += choices[state]
+		if random_val < current_sum:
+			return state
+	
 	return "Idle"
