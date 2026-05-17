@@ -26,6 +26,7 @@ Resources="*res://scripts/resources.gd"
 GameTime="*res://scripts/game_time.gd"
 Game="*res://scripts/game.gd"
 SceneHandler="*res://scripts/scene_handler.gd"
+GlobalAi="*uid://bfmwk2ud8ecqg"
 
 [display]
 
