@@ -95,3 +95,17 @@ brain = NodePath("Brain")
 
 [node name="Brain" type="Node" parent="Chickens/Chicken" unique_id=1691065535]
 script = ExtResource("9_kcnad")
+
+[node name="Chicken2" parent="Chickens" unique_id=805823090 node_paths=PackedStringArray("brain") instance=ExtResource("8_rxx8o")]
+position = Vector2(328, 168)
+brain = NodePath("Brain")
+
+[node name="Brain" type="Node" parent="Chickens/Chicken2" unique_id=1514587312]
+script = ExtResource("9_kcnad")
+
+[node name="Chicken3" parent="Chickens" unique_id=876413570 node_paths=PackedStringArray("brain") instance=ExtResource("8_rxx8o")]
+position = Vector2(208, 176)
+brain = NodePath("Brain")
+
+[node name="Brain" type="Node" parent="Chickens/Chicken3" unique_id=741376671]
+script = ExtResource("9_kcnad")
