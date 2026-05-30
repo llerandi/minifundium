@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dejw0epc8ff8c"]
+
+[ext_resource type="Script" uid="uid://b50pc1btglwxw" path="res://scenes/ui/back_to_menu.gd" id="1_3nliw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mpyy2"]
+load_path = "res://.godot/imported/ui_assets_spritesheet.png-e65e7f73d7976a86dd91c5810ac1623c.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn4wl"]
+atlas = SubResource("CompressedTexture2D_mpyy2")
+region = Rect2(245, 564, 22, 24)
+
+[node name="BackToMenu" type="Control" unique_id=957091716]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3nliw")
+
+[node name="Control" type="Control" parent="." unique_id=1105663962]
+anchors_preset = 0
+offset_left = -58.0
+offset_top = 42.0
+offset_right = -18.0
+offset_bottom = 62.0
+
+[node name="Back" type="Button" parent="Control" unique_id=1413600148]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.4460001
+anchor_top = -2.0630002
+anchor_right = 1.4460001
+anchor_bottom = -2.0630002
+offset_left = 1.159996
+offset_top = 0.26000214
+offset_right = 21.159996
+offset_bottom = 20.260002
+theme_type_variation = &"GameTimeButton"
+
+[node name="TextureRect" type="TextureRect" parent="Control/Back" unique_id=1583289477]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_vn4wl")
+
+[connection signal="pressed" from="Control/Back" to="." method="_on_back_pressed"]
