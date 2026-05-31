@@ -4,3 +4,4 @@
 executable/
 export_presets.cfg
 *.tmp
+images/*.import
