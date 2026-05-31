@@ -90,7 +90,7 @@ size_flags_vertical = 8
 [node name="GameVersionText" type="Label" parent="MarginContainer/MarginContainer2" unique_id=809256923]
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
-text = "v0.1.0 (alpha)"
+text = "v0.4.0 (beta)"
 horizontal_alignment = 1
 vertical_alignment = 1
 

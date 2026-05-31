@@ -32,9 +32,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 
+[node name="BackToMenu" parent="MarginContainer" unique_id=957091716 instance=ExtResource("6_v1bdg")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
 [node name="GameTimeCycleUI" parent="MarginContainer" unique_id=1928858091 instance=ExtResource("4_fct72")]
 layout_mode = 2
 size_flags_horizontal = 8
-
-[node name="BackToMenu" parent="MarginContainer" unique_id=957091716 instance=ExtResource("6_v1bdg")]
-layout_mode = 2
