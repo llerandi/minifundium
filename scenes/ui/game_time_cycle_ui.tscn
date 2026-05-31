@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cb72lmyml655w"]
+[gd_scene format=3 uid="uid://cb72lmyml655w"]
 
 [ext_resource type="Theme" uid="uid://brxhpsbsklqkb" path="res://scenes/ui/game_theme.tres" id="1_mpyy2"]
 [ext_resource type="Script" uid="uid://cvt8qtxhgorfh" path="res://scenes/ui/game_time_cycle_ui.gd" id="2_vprui"]
@@ -17,13 +17,13 @@ load_path = "res://.godot/imported/ui_assets_spritesheet.png-e65e7f73d7976a86dd9
 atlas = SubResource("CompressedTexture2D_5slsl")
 region = Rect2(306, 419, 13, 10)
 
-[node name="GameTimeCycleUI" type="Control"]
+[node name="GameTimeCycleUI" type="Control" unique_id=1572333012]
 layout_mode = 3
 anchors_preset = 0
 theme = ExtResource("1_mpyy2")
 script = ExtResource("2_vprui")
 
-[node name="Day" type="PanelContainer" parent="."]
+[node name="Day" type="PanelContainer" parent="." unique_id=185011380]
 layout_mode = 0
 offset_left = -118.0
 offset_top = 1.0
@@ -31,20 +31,20 @@ offset_right = -61.0
 offset_bottom = 41.0
 theme_type_variation = &"GameTime"
 
-[node name="MarginContainer" type="MarginContainer" parent="Day"]
+[node name="MarginContainer" type="MarginContainer" parent="Day" unique_id=537754575]
 layout_mode = 2
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="DayLabel" type="Label" parent="Day/MarginContainer"]
+[node name="DayLabel" type="Label" parent="Day/MarginContainer" unique_id=1745718795]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
 text = "Day 0"
 
-[node name="Time" type="PanelContainer" parent="."]
+[node name="Time" type="PanelContainer" parent="." unique_id=1220121895]
 layout_mode = 0
 offset_left = -58.0
 offset_top = 1.0
@@ -52,33 +52,33 @@ offset_right = -1.0
 offset_bottom = 41.0
 theme_type_variation = &"GameTime"
 
-[node name="MarginContainer" type="MarginContainer" parent="Time"]
+[node name="MarginContainer" type="MarginContainer" parent="Time" unique_id=1583857020]
 layout_mode = 2
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="TimeLabel" type="Label" parent="Time/MarginContainer"]
+[node name="TimeLabel" type="Label" parent="Time/MarginContainer" unique_id=1978680484]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 12
 text = "00:00"
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=893641724]
 anchors_preset = 0
 offset_left = -58.0
 offset_top = 42.0
 offset_right = -18.0
 offset_bottom = 62.0
 
-[node name="x1" type="Button" parent="Control"]
+[node name="x1" type="Button" parent="Control" unique_id=759621550]
 layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
 theme_type_variation = &"GameTimeButton"
 
-[node name="TextureRect" type="TextureRect" parent="Control/x1"]
+[node name="TextureRect" type="TextureRect" parent="Control/x1" unique_id=672464856]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -93,14 +93,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_vprui")
 
-[node name="x2" type="Button" parent="Control"]
+[node name="x2" type="Button" parent="Control" unique_id=1816927507]
 layout_mode = 0
 offset_left = 20.0
 offset_right = 40.0
 offset_bottom = 20.0
 theme_type_variation = &"GameTimeButton"
 
-[node name="TextureRect" type="TextureRect" parent="Control/x2"]
+[node name="TextureRect" type="TextureRect" parent="Control/x2" unique_id=1035369045]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

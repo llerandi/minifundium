@@ -58,3 +58,11 @@ func initial_time() -> void:
 	)
 	
 	time = init_total_minutes * MINUTE_GAME
+
+func reset_time() -> void:
+	time = 0.0
+	current_minute = -1
+	current_day = 0
+	game_speed = 2.0
+	
+	initial_time()
