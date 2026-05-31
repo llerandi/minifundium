@@ -3,8 +3,8 @@ extends Control
 @onready var day_label: Label = $Day/MarginContainer/DayLabel
 @onready var time_label: Label = $Time/MarginContainer/TimeLabel
 
-@export var speed_x1: int = 100
-@export var speed_x2: int = 200
+@export var speed_x1: int = 750
+@export var speed_x2: int = 1500
 
 func _on_x_1_pressed() -> void:
 	GameTime.game_speed = speed_x1

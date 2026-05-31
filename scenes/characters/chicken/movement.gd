@@ -16,8 +16,8 @@ extends State
 @export var navigation: NavigationAgent2D
 
 # Configuring the speed of the chicken movement
-@export var speed_min: float = 6.0
-@export var speed_max: float = 10.0
+@export var speed_min: float = 10.0
+@export var speed_max: float = 20.0
 var speed: float
 
 # Called by the state machine once when the state becomes active
