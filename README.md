@@ -3,10 +3,10 @@
 ### An AI-Driven Agriculture Simulation and Intelligent NPC Laboratory in Godot 4
 
 [![Godot Engine](https://img.shields.io/badge/Godot_Engine-4.6_-blue?logo=godot-engine&logoColor=white)](https://godotengine.org)
-[![License: CC BY -NC -ND 3.0](https://img.shields.io/badge/License-CC_BY--NC--ND_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
+[![License: CC BY-NC-ND 3.0](https://img.shields.io/badge/License-CC_BY--NC--ND_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
 [![Stage](https://img.shields.io/badge/Stage-Beta_v0.4.0-orange)](#)
 
-Minifundium is a cozy agricultural simulation and behavioral AI testing ground developed in Godot Engine 4. The project redefines standard Non-Player Character (NPC) behaviors in management games —where characters traditionally adhere to static, pre - calcula ted routine loops —by introducing dynamic, adaptive helpers powered by native **Tabular Reinforcement Learning**.
+Minifundium is a cozy agricultural simulation and behavioral Artificial Intelligence (AI) testing ground developed in Godot Engine 4. The project redefines standard Non-Player Character (NPC) behaviors in management games - where characters traditionally adhere to static, pre-calcula ted routine loops - by introducing dynamic, adaptive helpers powered by native **Reinforcement Learning** (RL).
 
 The name comes from the Latinized Spanish word *"minifundio"*, which refers to a very small farming plot.
 
@@ -25,7 +25,6 @@ The name comes from the Latinized Spanish word *"minifundio"*, which refers to a
 
 ![Gameplay Snapshot](./images/minifundium-01.png)
 
-
 ## The AI Laboratory Architecture
 
 Minifundium functions as an experimental sandbox split into distinct layouts (Laboratories). This structure isolates and compares deterministic behaviors against adaptive learning models.
@@ -38,11 +37,9 @@ Minifundium functions as an experimental sandbox split into distinct layouts (La
 4. **Lab 4 (Group Reinforcement Learning):** Multi-agent collective intelligence.
 Multiple chickens interface with a unified autoloaded global matrix. Knowledge acquired by a single helper immediately optimizes the behavior vector of the entire flock.
 
-
-
 ## Deep Dive: How the Native RL Matrix Works
 
-To avoid resource -heavy external dependencies, sockets, or complex Python wrappers (like MLAgents), Minifundium houses its weight -based transition logic natively inside lightweight GDScript components (`brain_rl.gd`).
+To avoid resource-heavy external dependencies, sockets, or complex Python wrappers (like MLAgents), Minifundium houses its weight-based transition logic natively inside lightweight GDScript components (`brain_rl.gd`).
 
 ### 1. The Weight -Based Matrix State
 Each RL brain contains a structured dictionary mapping current conditions to historical selection weights. Initially, the paths for `Idle` vs. `Harvest` choices are perfectly balanced:
@@ -55,7 +52,7 @@ var matrix = {
 ```
 
 ### 2. Rewarding the System
-When a crop matures and the player gives a direct execution harvest command (R Key), the chicken tracks its past status and increments the priority of that selection inside its row:
+When a crop matures and the player gives a direct execution harvest command (`R Key`), the chicken tracks its past status and increments the priority of that selection inside its row:
 
 ```gdscript
 func on_player_command() -> void:
@@ -69,14 +66,13 @@ func on_player_command() -> void:
 ```
 
 ### 3. Choosing Actions via Weighted Selection
-When an action ends, the brain queries the row corresponding to its last_state and executes an action selection algorithm based on a randomized wheel approach:
+When an action ends, the brain queries the row corresponding to its `last_state` and executes an action selection algorithm based on a randomized wheel approach:
 
 ```gdscript
 func _choose_weighted_action() -> String:
 	var choices = matrix[last_state]
 	var total_weight = 0
 	
-	# Sum the weights in the corresponding row
 	for w in choices.values():
 		total_weight += w
 	
@@ -91,7 +87,7 @@ func _choose_weighted_action() -> String:
 	return "Idle"
 ```
 
-As the player repeatedly rewards harvesting behavior, the  statistical scale shifts heavily towards farm chores, turning an aimless wanderer into a proactive helper.
+As the player repeatedly rewards harvesting behavior, the statistical scale shifts heavily towards farm chores, turning an aimless wanderer into a proactive helper.
 
 ## Technical Specifications & System Architecture
 Minifundium is fully modular, dividing behaviors into decoupled nodes following clean game design patterns.
@@ -99,23 +95,22 @@ Minifundium is fully modular, dividing behaviors into decoupled nodes following 
 * **Godot 4.6 Engine Features**: Built using the Forward Plus rendering
 backend, making full use of the new TileMapLayer nodes for separate layout mapping (Water, Grass, Ground, Tilled Dirt).
 * **Decoupled States**: Implements a strict State Pattern. States like Harvest, Idle, and Movement emit transition requests back to a StateMachine arbiter.
-* **Component-Driven Entities**: Items interact through typed areas (Hitbox and Hurtbox layers) allowing explicit tool validation (e.g., the Tree sprite node only registers damage calculations when overlapping a hitbox where current_tool == DataTypes.Tool.AXE).
+* **Component-Driven Entities**: Items interact through typed areas (Hitbox and Hurtbox layers) allowing explicit tool validation (e.g., the Tree sprite node only registers damage calculations when overlapping a hitbox where `current_tool == DataTypes.Tool.AXE`).
 * **Autoload managers** (Singletons):
-   * **GameTime**: Manages cycles using internal mathematical scaling (TAU / (60 * 24)), driving the growth ticks of vegetable nodes.
+   * **GameTime**: Manages cycles using internal mathematical scaling (`TAU / (60 * 24)`), driving the growth ticks of vegetable nodes.
    * **Resources**: Centralizes global item counts for carrots, turnips, beets, saplings, and logs.
    * **GlobalAi**: Hosts the shared flock matrices utilized by Lab 4.
 
 ## Art & Visual Assets Credits
 
-The high -quality visual assets, character spritesheets, and environment tiles used in Minifundium were officially sourced from Sprout Lands by Cup Nooble via itch.io.
+The high-quality visual assets, character spritesheets, and environment tiles used in Minifundium were officially sourced from Sprout Lands by CupNooble via itch.io.
 
-* License Status: Fully licensed. The Premium Version of the assets was purchased to support the original creator and to access extended tilesets, tool animations, and animal spritesheets (including the chickens, cows, and advanced agricultural packages utilized throughout the laboratory levels).
-* Direct File Usage Reference (assets/game/):
-   * premium_character_spritesheet.png: Employed for advanced tilling, watering, and woodcutting player animation states.
-   * red_chicken_spritesheet.png & green_cow_spritesheet.png: Integrated to drive the entity behavioral and laboratory AI simulations.
-   * tilled_tiles.png & water_objects_spritesheet.png: Bound to the
-layered, interactive tilemap grid layout.
-* Creator Profile: Cup Nooble on itch.io
+* **License Status**: Fully licensed. The Premium Version of the assets was purchased to support the original creator and to access extended tilesets, tool animations, and animal spritesheets (including the chickens, cows, and advanced agricultural packages utilized throughout the laboratory levels).
+* **Direct File Usage Reference** (`assets/game/`):
+   * `premium_character_spritesheet.png`: Employed for advanced tilling, watering, and woodcutting player animation states.
+   * `red_chicken_spritesheet.png` & `green_cow_spritesheet.png`: Integrated to drive the entity behavioral and laboratory AI simulations.
+   * `tilled_tiles.png` & `water_objects_spritesheet.png`: Bound to the layered, interactive tilemap grid layout.
+* **Creator Profile**: [CupNooble on itch.io](https://cupnooble.itch.io).
 
 ***Note**: These assets are bundled strictly for the evaluation and execution of this academic project. Redistribution, extraction, or commercial reuse of these graphics outside of this repository is strictly prohibited under the creator's original asset license.*
 
@@ -126,15 +121,15 @@ The code elements and source assets are released under the **Attribution-NonComm
 ## System Requirements & Deployment
 
 ### Hardware Requirements
-* **OS**: Windows 10 / 11 (64 -bit)
-* **Memory**: 4 GB RAM
+* **OS**: Windows 10/11 (64-bit)
+* **Memory**: 4GB RAM
 * **Graphics**: Compatibility with Vulkan or OpenGL 3.3 standards.
 
-#### Method 1: Running the Pre - compiled Binary
+#### Method 1: Running the Pre-compiled Binary
 1. Go to the Releases tab on the right sidebar of this repository.
-2. Download the latest release .zip bundle for Windows.
+2. Download the latest release `.zip` bundle for Windows.
 3. Extract the assets into an empty directory.
-4. Run Minifundium.exe.
+4. Run `Minifundium.exe`.
 
 #### Method 2: Sourcing from Code (Godot Editor)
 1. **Engine Setup**: Install Godot Engine 4.6 (Standard Edition) from the official website.
@@ -145,9 +140,9 @@ git clone https://github.com/llerandi/minifundium.git
 ```
 3. **Import Project**:
     * Open the Godot Project Manager.
-    * Click Import, navigate to your cloned path, and pick the project.godot file.
-    * Hit Import & Edit.
-4. **Execution**: Press F5 to open the runtime thread from the editor.
+    * Click `Import`, navigate to your cloned path, and pick the project.godot file.
+    * Hit `Import` & `Edit`.
+4. **Execution**: Press `F5` to open the runtime thread from the editor.
 
 ## Keybindings & Controls
 
