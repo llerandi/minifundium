@@ -6,6 +6,10 @@
 [![License: CC BY-NC-ND 3.0](https://img.shields.io/badge/License-CC_BY--NC--ND_3.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/3.0/)
 [![Stage](https://img.shields.io/badge/Stage-Beta_v0.4.0-orange)](#)
 
+> 💡**Research Project:** Investigating how to break static NPC routines in farming simulations using lightweight, native imitation learning purely in GDScript.
+>
+> [![Read the Article](https://img.shields.io/badge/Read_The_Article-Medium-black?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@llerandi/teaching-npcs-to-farm-reinforcement-learning-in-godot-57cb9eb4b87a)
+
 Minifundium is a cozy agricultural simulation and behavioral Artificial Intelligence (AI) testing ground developed in Godot Engine 4. The project redefines standard Non-Player Character (NPC) behaviors in management games - where characters traditionally adhere to static, pre-calcula ted routine loops - by introducing dynamic, adaptive helpers powered by native **Reinforcement Learning** (RL).
 
 The name comes from the Latinized Spanish word *"minifundio"*, which refers to a very small farming plot.
