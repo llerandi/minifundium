@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minifundium - AI-Driven Agriculture Simulation & NPC Laboratory</title>
+<meta name="description" content="A farming simulation prototype in Godot 4 for researching adaptive NPC behavior through native, lightweight Reinforcement Learning in GDScript.">
+<link rel="icon" href="https://raw.githubusercontent.com/llerandi/minifundium/main/icon.svg" type="image/svg+xml">
+<style>
+  :root{
+    --bg:#1b2417;
+    --bg-alt:#212c1c;
+    --card:#26331f;
+    --card-border:#3a4a30;
+    --accent:#8fbc5a;
+    --accent-dark:#6b9440;
+    --accent-soft:#c9dfa5;
+    --text:#eef2e6;
+    --text-dim:#aab89b;
+    --code-bg:#141c11;
+    --amber:#e0a54b;
+    --radius:14px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:
+      radial-gradient(1200px 600px at 15% -10%, #2b3a22 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #2a3a24 0%, transparent 55%),
+      var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  a{color:var(--accent-soft);}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  header.hero{
+    padding:72px 0 56px;
+    text-align:center;
+    border-bottom:1px solid var(--card-border);
+  }
+  .logo-wrap{display:flex;justify-content:center;margin-bottom:20px;}
+  .logo-wrap img{
+    max-width:340px;
+    width:80%;
+    filter:drop-shadow(0 8px 24px rgba(0,0,0,0.45));
+  }
+  .tagline{
+    font-size:1.15rem;
+    color:var(--text-dim);
+    max-width:640px;
+    margin:0 auto 28px;
+  }
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:30px;}
+  .badge{
+    font-size:0.78rem;
+    padding:5px 12px;
+    border-radius:999px;
+    background:var(--card);
+    border:1px solid var(--card-border);
+    color:var(--text-dim);
+  }
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 22px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    font-size:0.95rem;
+    transition:transform .15s ease, opacity .15s ease;
+    border:1px solid transparent;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--accent);color:#16210f;}
+  .btn-primary:hover{background:var(--accent-dark);}
+  .btn-ghost{background:transparent;border-color:var(--card-border);color:var(--text);}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-soft);}
+
+  section{padding:64px 0;border-bottom:1px solid var(--card-border);}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-size:1.7rem;
+    margin:0 0 10px;
+    color:var(--accent-soft);
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-size:.72rem;
+    color:var(--amber);
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .section-intro{color:var(--text-dim);max-width:720px;margin-bottom:36px;}
+
+  .gallery{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:18px;
+  }
+  .gallery img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:var(--radius);
+    border:1px solid var(--card-border);
+    display:block;
+  }
+  @media (max-width:720px){ .gallery{grid-template-columns:1fr;} }
+
+  .labs-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:16px;
+    margin-top:30px;
+  }
+  .lab-card{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  .lab-card .lab-num{
+    font-size:.72rem;
+    color:var(--amber);
+    font-weight:700;
+    letter-spacing:.08em;
+    margin-bottom:6px;
+  }
+  .lab-card h3{margin:0 0 8px;font-size:1.02rem;color:var(--text);}
+  .lab-card p{margin:0;color:var(--text-dim);font-size:.9rem;}
+
+  .arch-figure{
+    margin:32px 0 0;
+    text-align:center;
+  }
+  .arch-figure img{
+    max-width:100%;
+    border-radius:var(--radius);
+    border:1px solid var(--card-border);
+  }
+
+  pre{
+    background:var(--code-bg);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:16px 18px;
+    overflow-x:auto;
+    font-size:.83rem;
+    line-height:1.55;
+  }
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#d9e8c4;}
+  .code-caption{font-size:.8rem;color:var(--text-dim);margin:0 0 8px;}
+
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  @media (max-width:760px){ .two-col{grid-template-columns:1fr;} }
+
+  .story-card{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-left:3px solid var(--amber);
+    border-radius:10px;
+    padding:18px 20px;
+    margin-top:16px;
+  }
+  .story-card h4{margin:0 0 6px;color:var(--amber);font-size:.95rem;}
+  .story-card p{margin:0;color:var(--text-dim);font-size:.9rem;}
+
+  .stack-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    margin-top:24px;
+  }
+  .stack-item{
+    background:var(--card);
+    border:1px solid var(--card-border);
+    border-radius:10px;
+    padding:16px;
+    font-size:.88rem;
+    color:var(--text-dim);
+  }
+  .stack-item strong{display:block;color:var(--text);margin-bottom:4px;font-size:.92rem;}
+
+  footer{
+    padding:48px 0 64px;
+    text-align:center;
+    color:var(--text-dim);
+    font-size:.85rem;
+  }
+  footer a{color:var(--accent-soft);}
+  footer .footer-links{
+    display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
+    margin-bottom:18px;
+  }
+  footer .fine-print{max-width:640px;margin:0 auto;color:#7c8a6c;font-size:.78rem;}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="logo-wrap">
+      <img src="https://raw.githubusercontent.com/llerandi/minifundium/main/images/minifundium_logo.png" alt="Minifundium logo">
+    </div>
+    <p class="tagline">An AI-driven agriculture simulation and intelligent NPC laboratory built in Godot 4 - a research project on breaking static NPC routines with lightweight, native Reinforcement Learning.</p>
+    <div class="badges">
+      <span class="badge">Godot Engine 4.6</span>
+      <span class="badge">Stage: Beta v0.4.0</span>
+      <span class="badge">License: CC BY-NC-ND 3.0</span>
+      <span class="badge">TFG · Ingeniería Informática</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/llerandi/minifundium/releases/latest">⬇ Download latest build</a>
+      <a class="btn btn-ghost" href="https://github.com/llerandi/minifundium">View on GitHub</a>
+      <a class="btn btn-ghost" href="https://medium.com/@llerandi/teaching-npcs-to-farm-reinforcement-learning-in-godot-57cb9eb4b87a">Read the article</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow">The project</div>
+    <h2>Teaching NPCs to farm</h2>
+    <p class="section-intro">
+      In cozy farming sims like <em>Stardew Valley</em> or <em>Animal Crossing</em>, NPCs usually follow rigid,
+      pre-scripted daily routines. Minifundium asks a different question: what if a farm helper actually learned
+      from how you play, instead of just executing a schedule? The name comes from the Latinized Spanish word
+      <em>“minifundio”</em>, referring to a very small farming plot.
+    </p>
+    <div class="gallery">
+      <img src="https://raw.githubusercontent.com/llerandi/minifundium/main/images/minifundium-01.png" alt="Minifundium gameplay screenshot - chicken helper harvesting crops">
+      <img src="https://raw.githubusercontent.com/llerandi/minifundium/main/images/movement.png" alt="Minifundium chicken movement and navigation">
+    </div>
+  </div>
+</section>
+
+<section id="labs">
+  <div class="wrap">
+    <div class="eyebrow">Experimental design</div>
+    <h2>The AI Laboratory Architecture</h2>
+    <p class="section-intro">
+      Minifundium is split into four isolated layouts, each swapping the chicken helper's "brain" for a different
+      decision-making model - letting deterministic behavior be directly compared against adaptive learning.
+    </p>
+
+    <div class="arch-figure">
+      <img src="https://raw.githubusercontent.com/llerandi/minifundium/main/images/lab_architecture.png" alt="Diagram of the four AI laboratories in Minifundium">
+    </div>
+
+    <div class="labs-grid">
+      <div class="lab-card">
+        <div class="lab-num">LAB 1 - BASELINE</div>
+        <h3>Directly Commanded</h3>
+        <p>The chicken stays Idle until the player explicitly signals a harvest with the contextual action key (R). Validates the physical controller and navigation.</p>
+      </div>
+      <div class="lab-card">
+        <div class="lab-num">LAB 2 - INDUSTRY STANDARD</div>
+        <h3>Finite State Machine</h3>
+        <p>Classic reactive AI: on a timer, the brain checks "is there a ready crop?" and transitions accordingly. Autonomous, but inflexible.</p>
+      </div>
+      <div class="lab-card">
+        <div class="lab-num">LAB 3 - INDIVIDUAL</div>
+        <h3>Native Reinforcement Learning</h3>
+        <p>A lightweight, tabular Q-learning analogue built from scratch in GDScript. The agent builds its own weighted transition matrix from the player's reinforcement.</p>
+      </div>
+      <div class="lab-card">
+        <div class="lab-num">LAB 4 - COLLECTIVE</div>
+        <h3>Group Reinforcement Learning</h3>
+        <p>Multiple chickens share one autoloaded global matrix. Teaching a single helper instantly optimizes the behavior of the entire flock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="wrap">
+    <div class="eyebrow">Deep dive</div>
+    <h2>How the native RL matrix works</h2>
+    <p class="section-intro">
+      To avoid resource-heavy external dependencies, sockets, or ML frameworks like MLAgents, Minifundium implements
+      its weight-based transition logic natively inside lightweight GDScript components (<code>brain_rl.gd</code>).
+    </p>
+
+    <div class="two-col">
+      <div>
+        <p class="code-caption">1. Balanced starting weights</p>
+        <pre><code>var matrix = {
+   "Idle": {"Idle": 1, "Harvest": 1},
+   "Harvest": {"Idle": 1, "Harvest": 1}
+}</code></pre>
+      </div>
+      <div>
+        <p class="code-caption">2. Reinforcing a player command</p>
+        <pre><code>func on_player_command() -> void:
+    var crop = chicken.find_ready_crop()
+    if crop:
+        matrix[last_state]["Harvest"] += 1
+        chicken.target_crop = crop
+        last_state = "Harvest"
+        chicken.state.transition_to("Movement")</code></pre>
+      </div>
+    </div>
+
+    <p class="code-caption" style="margin-top:20px;">3. Choosing the next action - weighted roulette selection</p>
+    <pre><code>func _choose_weighted_action() -> String:
+    var choices = matrix[last_state]
+    var total_weight = 0
+    for w in choices.values():
+        total_weight += w
+
+    var random_val = randi() % total_weight
+    var current_sum = 0
+    for state in choices.keys():
+        current_sum += choices[state]
+        if random_val < current_sum:
+            return state
+    return "Idle"</code></pre>
+
+    <p class="section-intro" style="margin-top:20px;">
+      Every time the player rewards a harvest, the odds shift a little further away from wandering and toward
+      farm work - turning an aimless chicken into a proactive helper shaped by the player's own habits.
+    </p>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <div class="eyebrow">From the write-up</div>
+    <h2>What building this taught me</h2>
+    <p class="section-intro">
+      Notes from the <a href="https://medium.com/@llerandi/teaching-npcs-to-farm-reinforcement-learning-in-godot-57cb9eb4b87a">full article</a> on building Minifundium's AI.
+    </p>
+    <div class="story-card">
+      <h4>Weight saturation → infinite loops</h4>
+      <p>Spamming the reward key skewed the roulette wheel so hard that chickens got stuck trying to harvest empty plots forever. Fixed with a clamping function that caps and normalizes matrix weights.</p>
+    </div>
+    <div class="story-card">
+      <h4>A reality check before acting</h4>
+      <p>A predictive context validator now double-checks the world state before executing the roulette wheel's choice - if the chosen action isn't actually viable, its weight is temporarily zeroed and the wheel spins again.</p>
+    </div>
+    <div class="story-card">
+      <h4>Accidental hive mind</h4>
+      <p>Sharing one matrix across three chickens in Lab 4 meant training a single bird instantly changed how the whole flock behaved - a small, unplanned glimpse of collective learning.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="eyebrow">Under the hood</div>
+    <h2>Technical specifications</h2>
+    <div class="stack-list">
+      <div class="stack-item"><strong>Engine</strong>Godot 4.6, Forward Plus renderer, TileMapLayer nodes for Water / Grass / Ground / Tilled Dirt.</div>
+      <div class="stack-item"><strong>Architecture</strong>Strict State Pattern - Idle, Movement and Harvest states emit transitions to a StateMachine arbiter.</div>
+      <div class="stack-item"><strong>Components</strong>Typed Hitbox / Hurtbox areas drive tool validation (e.g. trees only take damage from the Axe).</div>
+      <div class="stack-item"><strong>Autoloads</strong>GameTime (growth cycle), Resources (inventory counters), GlobalAI (shared flock matrix for Lab 4).</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="https://github.com/llerandi/minifundium">GitHub Repository</a>
+      <a href="https://github.com/llerandi/minifundium/releases/latest">Latest Release</a>
+      <a href="https://medium.com/@llerandi/teaching-npcs-to-farm-reinforcement-learning-in-godot-57cb9eb4b87a">Medium Article</a>
+      <a href="https://cupnooble.itch.io">Art by CupNooble</a>
+    </div>
+    <p class="fine-print">
+      Minifundium is an academic research project (Trabajo de Fin de Grado, Ingeniería Informática - itinerario de Videojuegos).
+      Code and source assets are released under CC BY-NC-ND 3.0. Visual assets are from Sprout Lands by CupNooble,
+      licensed for use strictly within the evaluation and execution of this project.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
